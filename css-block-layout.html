@@ -39,13 +39,13 @@
     }
 
 
-    ul.cards {
+    ul.cards1 {
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
-    ul.cards li {
+    ul.cards1 li {
       box-sizing: border-box;
       width: 180px;
       height: 40px;
@@ -56,15 +56,15 @@
       line-height: 34px;
     }
 
-    ul.cards li:nth-child(n + 5) {
+    ul.cards1 li:nth-child(n + 5) {
       margin-left: 210px;
     }
 
-    ul.cards li:nth-child(n + 9) {
+    ul.cards1 li:nth-child(n + 9) {
       margin-left: 420px;
     }
 
-    ul.cards li:nth-child(4n + 5) {
+    ul.cards1 li:nth-child(4n + 5) {
       margin-top: -220px;
     }
 
@@ -79,6 +79,25 @@
       border-bottom: 5px dotted;
       margin-bottom: -5px;
     }
+
+    ul.cards2 {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.cards2 li {
+      display: inline-block;
+      width: 180px;
+      height: 40px;
+      border: 3px solid;
+      background-color: pink;
+      margin-bottom: 15px;
+      text-align: center;
+      line-height: 34px;
+    }
+
+
 
     /*BFC //Block Format Context
 
@@ -105,7 +124,7 @@
       页面主体 宽度600px
 
     </p>
-    <ul class="cards">
+    <ul class="cards1">
       <li>宽180高40(包含边框)</li>
       <li>水平间隙30px</li>
       <li>垂直间隙15px</li>
@@ -125,6 +144,23 @@
       <li>link</li>
       <li>link</li>
       <li>link</li>
+
+    </ul>
+
+    <ul class="cards2">
+      <li>宽180高40(包含边框)</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>水平间隙30px</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>垂直间隙15px</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>边框宽度3px</li>
+      <li>产品</li>
+      <li>产品</li>
+    </ul>
 
     </ul>
   </div>
