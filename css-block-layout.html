@@ -7,107 +7,130 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    * {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
     body {
       margin: 0;
+    }
 
+    nav {
+      background-color: black;
+      color: white;
+      padding-left: calc((100% - 600px)/2);
+      min-width: 600px;
+    }
+
+    .wrap {
+      width: 600px;
+      margin: auto;
     }
 
     header {
-      color: white;
       background-color: black;
+      color: white;
     }
 
-    .p1 {
+    header div {
+      width: 600px;
       margin: auto;
-      width: 600px;
-    }
-
-    .p2 {
-      margin: 10px auto;
-      width: 600px;
-    }
-
-    #aa {
-      width: 600px;
-      margin: 0 auto;
-      margin-bottom: 15px;
-    }
-
-    div:not([id="aa"]) {
-      width: 170px;
-      height: 30px;
-      border: 5px solid black;
-      background-color: pink;
-      margin-top: 15px;
-      text-align: center;
-      line-height: 30px;
-    }
-
-    div:not([id="aa"]):hover {
       background-color: red;
     }
 
-    div:nth-child(3n+2) {
-      margin-left: 210px;
-      margin-top: -40px;
+
+    ul.cards {
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
 
-    div:nth-child(3n+3) {
-      margin-left: 420px;
-      margin-top: -40px;
-    }
-
-    .p3 {
-      border: 1px dotted transparent;
-      border-bottom-color: black;
-      width: 598px;
-      margin: 0 auto;
-    }
-
-    .p4 {
-      border-color: transparent;
-    }
-
-    .p5 {
-      background-color: rgb(238, 138, 238);
-      margin-left: auto;
-      margin-right: auto;
+    ul.cards li {
+      box-sizing: border-box;
+      width: 180px;
+      height: 40px;
+      border: 3px solid;
+      background-color: pink;
+      margin-bottom: 15px;
       text-align: center;
+      line-height: 34px;
+    }
 
+    ul.cards li:nth-child(n + 5) {
+      margin-left: 210px;
+    }
+
+    ul.cards li:nth-child(n + 9) {
+      margin-left: 420px;
+    }
+
+    ul.cards li:nth-child(4n + 5) {
+      margin-top: -220px;
+    }
+
+    ul.links {
+      padding: 0;
+      list-style: none;
+      background-color: magenta;
+      overflow: hidden;
+    }
+
+    ul.links li {
+      border-bottom: 5px dotted;
+      margin-bottom: -5px;
+    }
+
+    /*BFC //Block Format Context
+
+    它不会与自己的子元素margin重叠 它自身形成了一个布局单元（布局此元素内部时不用考虑其外部，可以理解为完全隔离的，可以把此元素理解为一个iframe） footer {
+      text-align: center;
+      background-color: violet;   */
+
+    footer {
+      text-align: center;
+      background-color: violet;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <p class="p1">hello world 请调整浏览器窗口大小查看效果</p>
+    <div>
+      hello world 请调整浏览器窗口大小查看效果
+    </div>
   </header>
-  <p class="p2">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
-    页面主体 宽度600px
-    页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
-  </p>
-  <div id="aa">
-    <div>宽180高40(包含边框)</div>
-    <div>产品</div>
-    <div>产品</div>
-    <div>水平间隙30px</div>
-    <div>产品</div>
-    <div>产品</div>
-    <div>垂直间隙15px</div>
-    <div>产品</div>
-    <div>产品</div>
-    <div>边框宽度3px</div>
-    <div>产品</div>
-    <div>产品</div>
+  <div class="wrap">
+    <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+      页面主体 宽度600px
+
+    </p>
+    <ul class="cards">
+      <li>宽180高40(包含边框)</li>
+      <li>水平间隙30px</li>
+      <li>垂直间隙15px</li>
+      <li>边框宽度3px</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+    </ul>
+    <ul class="links">
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+
+    </ul>
   </div>
-  <p class="p3">link</p>
-  <p class="p3">link</p>
-  <p class="p3">link</p>
-  <p class="p3">link</p>
-  <p class="p3 p4">link</p>
-  <p class="p5">©版权所有<br>本页所有布局均使用块元素</p>
-
-
+  <footer>
+    ©版权所有<br>本页所有布局均使用块元素
+  </footer>
 </body>
 
 </html>
