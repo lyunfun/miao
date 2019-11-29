@@ -8,7 +8,8 @@
   <title>Document</title>
   <style>
     * {
-      background-color: rgba(0, 0, 0, 0.1);
+      xbackground-color: rgba(0, 0, 0, 0.1);
+      xbox-shadow: 0 0 3px;
     }
 
     body {
@@ -37,7 +38,6 @@
       margin: auto;
       background-color: red;
     }
-
 
     ul.cards1 {
       margin: 0;
@@ -88,6 +88,7 @@
 
     ul.cards2 li {
       display: inline-block;
+      box-sizing: border-box;
       width: 180px;
       height: 40px;
       border: 3px solid;
@@ -97,14 +98,10 @@
       line-height: 34px;
     }
 
-
-
     /*BFC //Block Format Context
-
     它不会与自己的子元素margin重叠 它自身形成了一个布局单元（布局此元素内部时不用考虑其外部，可以理解为完全隔离的，可以把此元素理解为一个iframe） footer {
       text-align: center;
       background-color: violet;   */
-
     footer {
       text-align: center;
       background-color: violet;
