@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>QQ邮箱主页布局</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+    }
+
+    div.home {
+      height: 100%;
+      width: 100%;
+      font-size: 0;
+    }
+
+    div.home>* {
+      font-size: 15px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    div>nav {
+      height: 68px;
+      width: 100%;
+      border-bottom: 2px solid;
+      background-color: RGB(96, 137, 212);
+      text-align: center;
+    }
+
+    #lb {
+      height: calc(100% - 68px);
+      width: 188px;
+      background-color: gainsboro;
+      border-right: 2px solid;
+      text-align: center;
+    }
+
+    #cb {
+      width: calc(100% - 188px);
+      height: calc(100% - 68px);
+      background-color: RGB(255, 255, 255);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="home">
+    <nav class="header">
+      <span>上栏</span>
+    </nav>
+    <nav id="lb">侧栏</nav>
+    <nav id="cb">内容</nav>
+  </div>
+</body>
+
+</html>
