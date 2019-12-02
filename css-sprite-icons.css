@@ -1,0 +1,26 @@
+.icon {
+      box-shadow: 0 0 0 1px black;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background-image: url(https://www.google.com/images/nav_logo242_hr.webp);
+      background-repeat: no-repeat;
+    }
+
+    .icon-google-logo {
+      background-position: 0px -84px;
+      width: 191px;
+      height: 67px;
+    }
+
+    .icon-play {
+      background-position: -276px -87px;
+      width: 55px;
+      height: 50px;
+    }
+
+    .icon-map {
+      background-position: -302px -421px;
+      width: 31px;
+      height: 35px;
+    }
