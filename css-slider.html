@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    * {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    div {
+      border: 5px solid;
+      position: relative;
+      width: 500px;
+      height: 200px;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 1s;
+      opacity: 0;
+    }
+
+
+    input {
+      position: relative;
+      top: calc(100% - 20px);
+      z-index: 10;
+    }
+
+    input:checked+*+*+*+img {
+      left: 0;
+      opacity: 1;
+    }
+
+    label.pre {
+      position: absolute;
+      top: 40%;
+      z-index: 999;
+      display: block;
+      padding: 4% 3%;
+      width: auto;
+      height: auto;
+      background: #2a2a2a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 20px;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    label.mid1 {
+      position: absolute;
+      top: 40%;
+      z-index: 999;
+      display: block;
+      padding: 4% 3%;
+      width: auto;
+      height: auto;
+      background: #2a2a2a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 20px;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    label.mid2 {
+      position: absolute;
+      top: 40%;
+      right: 0;
+      z-index: 999;
+      display: block;
+      padding: 4% 3%;
+      width: auto;
+      height: auto;
+      background: #2a2a2a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 20px;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    label.nex {
+      position: absolute;
+      top: 40%;
+      right: 0;
+      z-index: 998;
+      display: block;
+      padding: 4% 3%;
+      width: auto;
+      height: auto;
+      background: #2a2a2a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 20px;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    a.control_prev {
+      border-radius: 0 2px 2px 0;
+    }
+
+    a.control_next {
+      right: 0;
+      border-radius: 5px 0 0 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <label for="previous" class="pre"></label>
+    <label for="mid1" class="mid1"></label>
+    <label for="mid2" class="mid2"></label>
+    <label for="next" class="nex"></label>
+    <input type="radio" name="slider" checked id="previous">
+    <input type="radio" name="slider" id="mid1">
+    <input type="radio" name="slider" id="mid2">
+    <input type="radio" name="slider" id="next">
+    <img
+      src="https://lh3.googleusercontent.com/Wiezl7YwL6k2-kWGYqp0kagDPWIw2Shoq13AcmynbJAH1oGH3LUmS_UAxwhiYpDSA0GtDSz49X10IZ6R44JhizcdTesx2WC3iidfpfYN"
+      alt="">
+
+    <img
+      src="https://lh3.googleusercontent.com/aZqJG8I3h9TUtXemg6z56_hblEKOQZqd4Om5um4hMQqWdEOH4FPl9PgvUjN3dQRQ75Mdl4ipcl1L6Ao0ffqUiGgEHs5OZSb5efHu1KSBfA"
+      alt="">
+
+    <img
+      src="https://lh3.googleusercontent.com/qXWmuzSiNxyNij_YAWkjA4tkPU6kGz5BqgJXtcUBZ7ltFlgtu6HgbaaCtOZE-Kr3Js1A-uSdFYP1dxaSl295rOxN7Rc-TolFuNEZdnM"
+      alt="">
+
+    <img
+      src="https://lh3.googleusercontent.com/A5LKNjNKdGHwVUrMWzYk7I-VAkNt2e7Tep9pz5c82mKZ4A_96N6j7YoayhVDt1rcKVxv2K5ICmiVvjFN4ECbeUaXj8LE8ucF2vtEUyse"
+      alt="">
+  </div>
+</body>
+
+</html>
