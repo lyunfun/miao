@@ -11,7 +11,7 @@
       background-color: rgba(0, 0, 0, 0.1);
     }
 
-    input {
+    input.checkbox {
       display: none;
     }
 
@@ -27,7 +27,7 @@
       background-color: white;
     }
 
-    input+label {
+    input.checkbox+label.checkbox {
       width: 66px;
       height: 35px;
       overflow: hidden;
@@ -37,16 +37,16 @@
       position: relative;
       background-color: #DDDDDD;
       transition: .3s;
-      top: 50px;
-      left: 50%;
+      top: 10px;
+      left: 47%;
     }
 
-    input:checked+label {
+    input.checkbox:checked+label.checkbox {
       background-color: #30f439;
       border-color: #30f439;
     }
 
-    input+label::before {
+    input.checkbox+label.checkbox::before {
       content: '';
       display: inline-block;
       top: 3px;
@@ -60,16 +60,65 @@
       background-color: white;
     }
 
-    input:checked+label::before {
+    input.checkbox:checked+label.checkbox::before {
       left: 33px;
+    }
+
+    input.radio {
+      visibility: hidden;
+    }
+
+    label.radio {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border: 5px solid #AAAAAA;
+      border-radius: 100%;
+      position: relative;
+      transition: .3s;
+      cursor: pointer;
+      margin: 10px auto;
+      margin-left: 20px;
+      left: 45%;
+    }
+
+    input.radio:checked+label.radio {
+      border-color: #0DFF92;
+    }
+
+    label.radio::before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      border-radius: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      background-color: black;
+      transition: .3s;
+    }
+
+    input.radio:checked+label.radio::before {
+      width: 15px;
+      height: 15px;
+      background-color: #0DFF92;
     }
   </style>
 </head>
 
 <body>
   <h2>iOS checkbox</h2>
-  <input type="checkbox" name="" id="box1">
-  <label for="box1"></label>
+  <input type="checkbox" name="" id="box1" class="checkbox">
+  <label for="box1" class="checkbox"></label><br>
+
+  <h2>Radio Button</h2>
+  <input type="radio" name="type" id="a1" class="radio"><label for="a1" class="radio"></label><br>
+  <input type="radio" name="type" id="a2" class="radio"><label for="a2" class="radio"></label><br>
+  <input type="radio" name="type" id="a3" class="radio"><label for="a3" class="radio"></label>
+
 </body>
 
 </html>
