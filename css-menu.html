@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Menu</title>
+  <style>
+    * {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      color: white;
+    }
+
+    ul li {
+      position: relative;
+      white-space: nowrap;
+      background-color: #3c3c3c;
+    }
+
+    ul.menu>li {
+      display: inline-block;
+      padding: 10px;
+    }
+
+    ul.menu ul li {
+      padding: 10px 18px;
+    }
+
+    ul.menu ul li:hover {
+      background-color: #094771;
+
+    }
+
+    ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+
+    ul ul ul {
+      top: 0;
+      left: 100%;
+    }
+
+    li:hover>ul {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="menu">
+    <li>文件<ul>
+        <li>保存</li>
+        <li>另存为</li>
+        <li>退出<ul>
+            <li>全选</li>
+            <li>上一个</li>
+            <li>下一个<ul>
+                <li>剪切</li>
+                <li>复制</li>
+                <li>粘贴</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>编辑
+      <ul>
+        <li>剪切</li>
+        <li>复制</li>
+        <li>粘贴</li>
+      </ul>
+    </li>
+    <li>选择
+      <ul>
+        <li>全选</li>
+        <li>上一个</li>
+        <li>下一个</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>
