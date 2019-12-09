@@ -19,7 +19,7 @@
     }
 
     table {
-      margin: 80px auto 0 auto;
+      margin: 60px auto 40px auto;
       border-spacing: 0;
       border-collapse: collapse;
     }
@@ -41,6 +41,67 @@
 
     td:hover {
       border: 5px solid red;
+    }
+
+
+
+
+    ul.a {
+      list-style-type: none;
+      padding: 0;
+      margin: 40px auto 40px auto;
+      xborder: 1px solid red;
+      overflow: hidden;
+      width: 170px;
+      xheight: 170px;
+      padding-bottom: 5px;
+    }
+
+    ul.a li {
+      width: 50px;
+      height: 50px;
+      border: 5px solid blue;
+      float: left;
+      margin-right: -5px;
+      margin-bottom: -5px;
+      position: relative;
+      text-align: center;
+    }
+
+    ul.a li:hover {
+      border: 5px solid red;
+      z-index: 8;
+    }
+
+
+
+
+    ul.b {
+      display: inline-block;
+      width: 180px;
+      list-style-type: none;
+      padding: 0;
+      padding-bottom: 5px;
+      margin: 40px auto 40px 580px;
+    }
+
+    ul.b li a {
+      border: 5px solid blue;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      text-align: center;
+    }
+
+    ul.b li a:hover {
+      border: 5px solid red;
+      z-index: 8;
+    }
+
+    ul.b li {
+      float: left;
+      margin: 0 -5px -5px 0;
     }
   </style>
 </head>
@@ -69,6 +130,34 @@
       </tr>
     </tbody>
   </table>
+  <hr>
+
+
+  <ul class="a">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+  <hr>
+
+
+  <ul class="b">
+    <li><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+    <li><a href="">4</a></li>
+    <li><a href="">5</a></li>
+    <li><a href="">6</a></li>
+    <li><a href="">7</a></li>
+    <li><a href="">8</a></li>
+    <li><a href="">9</a></li>
+  </ul>
 </body>
 
 </html>
