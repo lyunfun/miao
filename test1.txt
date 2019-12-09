@@ -10,12 +10,18 @@
 01. 列出至少 7 个常用 Linux 命令及其基本使用方法
   * ls — List
   * cd — Change Directory
-  * cat— concatenate and print files
+  * cat— concatenate and print files      cat file1 file2 file3 > somefile
   * rmdir— Remove Directory
   * pwd — Print Working Directory
   * rm— Remove
   * ping-  ping test
   * cp— Copy
+  * vi file 启动并编辑文件
+    esc 推出编辑模式进入正常模式
+    i(insert) 进入编辑模式
+    :w(write) 保存
+    :q (quit) 退出
+    :wq 保存并退出
 
 02. 什么是 html 实体？常见 html 实体有哪些？
 html实体是以&开头以;结尾的字符串，可以用来表示任意字符串，主要用来表示不能明文出现在代码里的拥有特殊的含义的字符，比如回车，引号，<>号等
@@ -25,17 +31,20 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
   * &gt; 大于号
   * &quot; 双引号
   * &apos; 单引号
+  * &eq; 等于号
   * &nbsp; non-breaking space
 
 03. 计算机为什么使用二进制？
+  * 二进制数字信号可以有效地消除误差
   * 二进制足够简单，足够使用
+  * 二进制对应于数学中的布尔逻辑 （命题逻辑）
 
 04. 什么是 Unicode？如何表示，有什么作用？最通用的 Unicode 实现是？
   * Unicode是电脑科学领域里的一项业界标准字符编码。它对世界上大部分的文字系统进行了整理、编码，使得电脑可以用更为简单的方式来呈现和处理文字。
-  * 在表示一个 Unicode 的字元时，通常会用“U+”然后紧接着一组十六进位的数字来表示这一个字元。
+  * 在表示一个 Unicode 的字元时，通常会用 “U+” 然后紧接着一组十六进制的数字来表示这一个字元。
   * Unicode 的实现方式称为 Unicode转换格式（Unicode Transformation Format，简称为 UTF）。
   * 作用：解决了传统的字元编码方案在不同国家间出现不相容的情况，可以实现支援多语言环境（指可同时处理多种语言混合的情况）
-  * 目前通用的实现方式是 UTF-16 小端序（LE）、UTF-16 大端序（BE）和 UTF-8。
+  * 目前通用的实现方式是 UTF-8 和 UTF-16 小端序（LE）、UTF-16 大端序（BE）。
 
 
 
@@ -43,19 +52,30 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
   * GUI - Graphics User Interface，图形化用户界面/接口
   * CLI - Command Line Interface，命令行界面
   * 界面、用户界面（User Interface，简称UI）是系统和用户之间进行交互和信息交换的媒介，它实现信息的内部形式与人类可以接受形式之间的转换。
-  * 例子：电脑画面上显示窗口、图标、按钮等图形表示不同目的的动作，用户通过滑鼠等指针设备进行操作选择；银行取款机的触控屏显示按钮、信息，用户通过点击输入进行取钱。
+  * 例子：现实生活中所有通过按钮等操作的设备都是GUI，例如电脑画面上显示窗口、图标、按钮等图形表示不同目的的动作，用户通过滑鼠等指针设备进行操作选择；银行取款机的触控屏显示按钮、信息，用户通过点击输入进行取钱。
+    下达命令类似CLI
 
 06. 在什么情况下 html 标签可以不需要闭合？
-  * 没有任何内容的void元素，只有一个开始标签，属于自闭合标签如 <br> 、<img>
+  * 没有任何内容的void元素，属于自闭合标签，只有一个开始标签，如 <br> 、<img>
+  * 有些非自闭合标签在一些情况下也可以不用闭合，因为它会自动闭合，例如：p标签后面紧跟ul标签，则P标签不用闭合。
 
 07. 在一些情况下某些非自闭合标签的结束标签可以省略的原因是什么？
-  * 没有任何内容的void元素，只有一个开始标签，属于自闭合标签 如 <br> 、<img>
+  * 因为根据html标签分类等规则，在某些嵌套方式下，已经可以推导出该标签必须闭合，则不用需要人为书写该闭合标签。
+    <p>foo bar
+    <ul>
+      <li>谷歌
+      <li>苹果
+    </ul>
+
 
 08. 什么是费茨定律？它有哪些应用？
   * 费茨定律 是一个人机交互以及人体工程学中人类活动的模型，它预测了快速移动到目标区域所需的时间是目标区域的距离和目标区域的大小的函数。
-  * 费茨法则多用于表现 指、点 这个动作的概念模型，无论是用手或者手指进行物理接触，抑或是在电脑屏幕上用假想的设备（例如鼠标）进行虚拟的触碰。通过费茨定律我们可以看出，小并且/或者远的目标，需要更长的时间才能得以准确到达，这便是权衡指的动作的 速度的准确性。
+  * 费茨法则多用于表现 指、点 这个动作的概念模型，无论是用手或者手指进行物理接触，抑或是在电脑屏幕上用假想的设备（例如鼠标）进行虚拟的触碰。通过费茨定律我们可以看出，小并且/或者远的目标，需要更长的时间才能得以准确到达，这便是权衡指的动作的 速度的准确性。在交互过程中，目标的可达程度与鼠标与目标的距离呈反比，与目标的大小呈正比。
+  * 快捷键、鼠标手势、命令行、运行窗口
 
 09. 为什么英文很重要？
+  * 编程要用英文
+  * 报错是英文
   * 英语是当今世界上主要的国际通用语言
   * 英语的使用范围非常广泛,全世界75％的电视节目是英语，四分之三的邮件是用英语书写，互联网上的信息也以英语为主。
 
@@ -68,38 +88,39 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
 
 12. 将十进制数 `435` 分别转换成二进制数和十六进制数
   * 435(10) = 110110011(2)
-  * 435(10) = 1B3
+  * 435(10) = 1B3(16)
 
 13. 列出 HTML 中常见的全局属性
   * id；name; title; class; data-*
 
 14. 什么是操作系统的路径（Path）？它的作用及应用场景是？
-  * path它是一个列表，每一项是一个【文件夹的完整/绝对路径】
-  * 作用及应用：win-run等 通过把应用程序的路径加入到PATH变量中，在windows下我们可以直接用命令行来运行一个程序。
+  * path它是操作系统中的一个有序文件夹列表，每一项是一个【文件夹的完整/绝对路径】
+  * 作用及应用：win-run等 通过把应用程序的路径加入到PATH变量中，在命令行或windows的运行窗口中输入命令，会按序在路径列表中查找相应的可执行程序来执行。
+    一个应用场景是借由运行窗口加快我们打开软件的速度
 
 15. 什么是文本文件？什么是二进制文件？它们最明显的区别是？
   * 文本文件一般指只有字符原生编码构成的二进制计算机文件，与富文本相比，其不包含字样样式的控制元素，能够被最简单的文本编辑器直接读取。
-  * 二进制文件（英语：Binary file）一般指包含ASCII及扩展ASCII字符中编写的数据或程序指令（Program instructions）的文件。
+  * 二进制文件（英语：Binary file）一般指包含ASCII及扩展ASCII字符中基于值编码编写的数据或程序指令（Program instructions）的文件。
   * 文件实际上包括两部分，控制信息和内容信息。纯文本没有控制格式信息。文本文件是特殊的二进制文件，是因为文本文件实际上的解释格式已经确定了：ASCII或者unicode编码。
 
 16. 为什么说 html 与数学公式有诸多相似之处？
-  * html 元素的嵌套规则与数学公式里的加减乘除括号等运算一模一样，树状（递归）结构相似
+  * html 元素标签的嵌套规则与数学公式里的加减乘除括号等运算一模一样，树状（递归）结构相似
 
 17. 几种常见图片格式有什么区别和特点？
   * jpg jpeg
-    * 有损压缩，压缩率很高，一般能够压缩到原始数据的十分之一
+    * 有损压缩，压缩率很高，一般能够压缩到原始数据的十分之一，以8*8为单位进行压缩
     * 质量越低，体积越小
     * 适合现实社会的照片和其他复杂图像
   * png
     * 无损压缩
     * 适合存储大片完全相同颜色的图片，如logo和其他包含单一色、线条或文本的简单图片
     * 不适合用来保存照片
-    * 支持透明色（Alpha通道）
+    * 支持透明色（Alpha通道）,支持最高256级透明
   * gif
     * 动图
     * 适合存储大片完全相同颜色的图片，如logo和其他包含单一色、线条或文本的简单图片
     * 无损压缩(原始图片颜色数量不足256时)
-  * bmp bit map 位图
+  * bmp (bit map) 位图
     * 无压缩，无损
     * 每个点占三个字节（取决于具体保存的格式：1670w色/24位，单色/1bit，256色/8bit，65536色/16bit）
     * 体积巨大
@@ -108,29 +129,35 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
     * 保存了Photoshop在构造这张图片的过程中的所有信息
   * webp
     * 有损压缩
+    * 支持透明
     * 各方面都胜过jpg
     * 适合在移动端使用
 
 18. `data-*` 属性一般是用来干嘛？
-  * data-*是一类被称为自定义数据属性的属性，它赋予我们在所有 HTML 元素上嵌入自定义数据属性的能力，并可以通过脚本(一般指JavaScript) 与 HTML 之间进行专有数据的交换。通过添加 data-* 属性，即使是普通的 HTML 元素也能变成相当复杂且强大的编程对象。
+  * data-*是一类被称为自定义数据属性的全局属性，它赋予我们在所有 HTML 元素上嵌入自定义数据属性的能力，并可以通过脚本(一般指JavaScript) 与 HTML 之间进行专有数据的交换。通过添加 data-* 属性，即使是普通的 HTML 元素也能变成相当复杂且强大的编程对象。
+  * 不会因为标准的改变而产生额外的语义。
 
 
 19. 用什么方法扩大一个 checkbox 的可点击区域？
-  * 添加<label>元素与checkbox复选框关联之后，可以起到触发开关的作用。
+  * 添加<label>元素与该 <input type="checkbox"> 复选框关联之后，可以起到触发开关的作用。
 
 20. 什么是 MIME Type？
   * 媒体类型（通常称为 Multipurpose Internet Mail Extensions 或 MIME 类型 ）是一种标准，用来表示文档、文件或字节流的性质和格式。
   * 浏览器通常使用MIME类型（而不是文件扩展名）来确定如何处理URL，因此Web服务器在响应头中添加正确的MIME类型非常重要。如果配置不正确，浏览器可能会曲解文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。
+  html text/html
+  css text/css
+  js application
 
 21. 哪些标签可以使用 target 属性？哪些标签可以使用 href 属性？
-  * <a> <link> <form> 可以使用target 属性
-  * <a> <link> 可以使用href 属性
+  * <a> <form> <base> <area>可以使用target 属性
+  * <a> <base> <link> 可以使用href 属性
 
 22. 什么是 BOM 头？
-  * 在utf-8编码文件中BOM在文件头部，占用三个字节，用来标示该文件属于utf-8编码
+  * 在utf-8编码文件中的文件头部，占用三个字节的文件头，用来表明编码字节序的 (用来标示该文件属于utf-8编码）
+    windows记事本软件会为文本文件添加bom头
 
 23. group 类型的标签有哪些？
-  * <hgroup> <optgroup> <colgroup>
+  * <hgroup> <optgroup> <colgroup> <fielset>
 
 24. 什么是 SEO？
   * 搜寻引擎最佳化（search engine optimization，缩写为SEO），是一种透过了解搜寻引擎的运作规则来调整网站，以及提高目的网站在有关搜寻引擎内排名的方式。
@@ -145,7 +172,20 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
   * 微信浏览器 -> webkit修改版（x5）
 
 26. 列表类标签有哪些？分别如何使用？需要注意些什么？
-  * <table> 每一个表格的内容都包含在这两个标签中 : <table></table>.
+  * ul 无序列表
+  * ol 有序列表
+  <dl>
+    <dt>
+    <dd>
+    <dd>
+
+
+    <dt>
+    <dd>
+    <dd>
+</dl>
+
+  <!-- * <table> 每一个表格的内容都包含在这两个标签中 : <table></table>.
   * <tr> 使用 <tr> 元素 ('tr' 代表 'table row')，增加表格的行
   * <td> 在表格中，最小的内容容器是单元格, 是通过 <td> 元素创建的
   * <thead> 需要嵌套在 table 元素中，放置在头部的位置
@@ -154,18 +194,34 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
   * <th> 表格中的标题是特殊的单元格，通常在行或列的开始处，定义行或列包含的数据类型， <th> 元素 ('th' 代表 'table header')将表格的标题在视觉上和语义上都能被识别为标题。即使你不给表格添加你自己的样式，表格标题也会带有一些默认样式：加粗和居中，让标题可以突出显示。
   * <col> 定义表格中的列，并用于定义所有公共单元格上的公共语义。它通常位于<colgroup>元素内。
   * <colgroup> 表格列组（Column Group <colgroup>） 标签用来定义表中的一组列表。
-  * <caption> 为表格增加一个标题
+  * <caption> 为表格增加一个标题 -->
 
 28. 为什么不同类型的标签的 fallback 内容要以不同的形式提供？
   * 防止有时候用户的浏览器并不一定支持指定的标签内容，这时可以指定退化（fallback）方案，来支持页面的功能实现。
+  <script></script>
+  <noscript>您的浏览器不支持script</noscript>
+
+  <iframe src="slfkje>
+    <p>您的浏览器不支持iframe</p>
+  </iframe>
+
+  原因在于某些在正常使用时，内部是有内容的，所以fallback不能放在其内部，如 script
+
+  某些标签在正常使用时，是空的，相当于替换元素，则fallback可以写在其内部，如iframe
 
 29. 分别写出在 head 中设定页面编码，设定 icon，引入样式表的标签
   * head 中设定页面编码 <meta charset="UTF-8">
+    <meta name="charset" content="UTF-8">
   * 设定 icon <link rel="shortcut icon" href="1.ico" type="image/x-icon">
   * 引入样式表 <link rel="stylesheet" href="/html/csstest1.css" >
 
 30. 什么叫做可访问性，html 中为此做了什么工作？
+  * 可访问性分很多层面：
+    * 指软件在不同设备上是否能够正常使用
+    * 指软件对于不同的人群是否能够正常使用
+    * 指软件对于各种不同输入设备能否使用
   * 可访问性：尽可能多的人使用你的网站——我们传统上认为这是关于残疾人的，但实际上它也涵盖了其他群体，比如使用移动设备的人群，那些网络连接缓慢的人群。
+
   * 尽可能地用正确的HTML标签来表达正确的意图，使用语义化的HTML(这将提高可访问性)也提高了搜索引擎优化，使你的网站更容易被人获得。
     * 文本内容
       拥有标题，段落，列表等内容的良好结构，便于屏幕阅读器用户获取页面信息。
@@ -173,6 +229,13 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
       使用更现代化的页面布局结构，使用HTML5语义元素，为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息
     * UI 控制
       重新建立键盘的可访问性，使用有意义的文字标签
+
+  html 中为此做了什么工作？
+    aria与role属性用来通过浏览器告诉读屏软件当前所代表的常见jiaohu1元素如下拉框，选项卡，列表框
+
+    表格th标签的的id与td标签的headers属性
+
+    tabindex
 
 31. 写出以下几个符号的 ascii 码：`a，A，0，CR，LF，空格，NBSP`。
   * a 97
@@ -185,60 +248,63 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
 
 32. 中英互翻
     * geek 极客
-    * nerd 怪胎 书呆子
+    * nerd 怪胎 呆子
     * hacker 骇客
-    * edge 尖端
+    * edge 尖端 边缘
     * bleeding/cutting edge 前沿/尖端/可能存在风险的技术
     * HTML 实体 HTML entity
     * coordinate 坐标
     * polygon 多边形
     * bit 比特
     * byte 字节
-    * alternative 可替代的
-    * 属性 attribute
-    * obsolate 作废的
+    * alternative 另外的可选项，可替代的
+    * 属性 attribute Property
+    * obsolate 已作废的
     * 二进制 binary
     * 十进制 decimal
     * 十六进制 hexadecimal
     * octal 八进制
-    * deprecate 弃用
+    * deprecate 不推荐使用的 弃用
     * loop 循环
     * 行 row
     * 列 column (col)
-    * horizontal 水平线
+    * horizontal hr 水平线
     * 语义化 semantic
     * 可访问性 accessibility
 
 
 33. 用文字描述如下选择器将选择哪些（个）元素
   ```css
-  div, h1 {} 选择了 <div> 和 <h1> 2个元素
-  div[class] [id="abc"] {} 选择了同时有 class 属性和 id="abc" 的 div 元素
-  div:hover ul li > div {} 选择了 div hover 时 ul 里的 li 元素的直接子元素为 div 的元素
-  body :active {} 选择了 active 状态的 body 元素
-  div:hover::after {} 选择了 div hover 时 div 的最后一个子元素
-  ::selection {} 选择了 唯一的页面元素(目标元素)
-  :target {} 选择了 一个唯一的页面元素(目标元素)，其id 与当前URL片段匹配
-  input + ul + p ~ span {} 选择了 input 和 ul 和 p 后面直接跟着的 span 元素
+  div, h1 {} 选择了 所有的 div 与所有的 h1
+  div[class] [id="abc"] {} 选择了有 class 属性的div元素里面的 id="abc" 的元素
+  div:hover ul li > div {} 选择了被 hover 的 div 里面的 ul 里面的 li 的div 子元素
+  body :active {} 选择了 body 里被激活的元素
+  div:hover::after {} 选择了被 hover 的 div 的 after 伪元素
+  ::selection {} 选择了被鼠标选中的部分文字，此选择器只能修改color和background-color
+  :target {} 选择了当前页面的目标元素，其id 与当前URL片段匹配（目标元素：id的值为地址栏中# 后面的内容的元素。）
+  input + ul + p ~ span {} 选择了 input 的下一个 ul 元素的下一个 p 后续的兄弟 span 元素
   ```
 
 34. 分别写出如下几个选择器的优先级
     ```css
-    * * * {} （0，0，0，3）
-    div * span {} (1,0,0,2)
-    div[title] {} （0,0,1,1）
-    fieldset legend + input {} (0,0,0,3)
-    #some #thing .not:hover .abc:hover {} (0,2,4,0)
+    * * * {} （0，0，0）
+    div * span {} (0,0,2)
+    div[title] {} （0,1,1）
+    fieldset legend + input {} (0,0,3)
+    #some #thing .not:hover .abc:hover {} (2,4,0)
     ```
 
 35. `em,px,rem,vw,vh` 分别代表多长？
-  * em = 希望得到的像素大小 / 父元素字体像素大小 【当前元素】font-size的大小
-  * px 不是一个绝对长度单位，但在设计中，大多数时候被认为是绝对长度
-  * rem root element's em html 元素（根元素）的字号
-  * vw/vh 1vw 视口宽度的100之一;1vh 视口高度的100之一
+  * em = （希望得到的像素大小 / 父元素字体像素大小） 【当前元素】font-size的大小。当用在font-size上时，取父元素的字号大小。
+  * px CSS像素，当页面不放大时代表一个操作系统像素，当操作系统分辨率与显示器物理分辨率分辨率相同时，一个px代表显示器的一个物理像素。（不是一个绝对长度单位，但在设计中，大多数时候被认为是绝对长度）
+  * rem root element's em html 根元素的字号
+  * vw/vh 1vw 视口宽度的百分之一; 1vh 视口高度的百分之一
+  * ex   x的高度    ch   0的宽度
 
 36. 显示器的物理分辨率为 `1920x1080`，操作系统设置的分辨率为 `1280x720`，网页的放大倍数为 `110%`，请计算一个 CSS 像素对应多少个显示器物理像素（面积与长度）？
-  * 2个
+  * 1.65
+  * 2.7225
+
 37. 写出如下代码显示在浏览器后**每个单词**的字号
     ```html
     <style>
@@ -258,16 +324,16 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
         font-size: inherit;
       }
     </style>
-    <body>
-      <section>
-        <h2>Brown</h2>
-        <p>quick</p>
-        <p>jumps <span>over <span>lazy</span> dog</span></p>
-        <p class="sucks">sucks</p>
+    <body 20px>
+      <section 200px>
+        <h2>Brown</h2> 300px
+        <p 24px>quick</p>
+        <p 24px>jumps <span 150%>over <span 150%>lazy</span> dog</span></p>
+        <p 200px class="sucks">sucks</p>
       </section>
     </body>
     ```
-  * Brown 的字号：200px
+  * Brown 的字号：300px
   * quick 的字号：24px
   * jumps 的字号：24px
   * over 的字号：36px
@@ -277,17 +343,29 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
 
 38. 如何给css添加注释
   *       /* 这是一行CSS注释 */
+  * 利用CSS的规则，也有其他的办法：
+    在属性名前
 
 39. 指出如下css代码中的错误
     ```
-    p,h1,{
+    p,h1,{                                 /* 去掉逗号*/
 
         background-color: rgba:(abc)    /* rgba(abc)； 应去掉冒号并加上分号*/
-        font-varient; abc;              /* 应写为font-varient： abc;*/
-        colr: #ff048;                  /* color属性拼写错误 */
-        font: "serif" 25px;           /* 应去掉 "" */
+        font-varient; abc;              /* 应写为font-variant： small-caps;    */
+        colr: #ff048;                  /* color属性拼写错误, 十六进制颜色 五位错误 */
+        font: "serif" 25px;           /*字号应在前， 字体族应去掉 "" */
     }
     ```
+
+```
+    p,h1{
+        background-color: rgba(r,g,b,a);
+        font-variant: small-caps;
+        color: #0f0048;
+        font: 25px serif;
+    }
+
+```
 
 40. 写出如下结构中div元素的所有后代/祖先/子/父/兄弟元素
     ```html
@@ -306,14 +384,18 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
       </main>
     </section>
     ```
-  * div元素的后代：<ul> <li>
+  * div元素的后代：<ul> <li> <a> <img>
   * div元素的祖先：<main> <section>
   * div元素的子元素：<ul>
   * div元素的父元素: <main>
   * div元素的兄弟元素: <h2> <aside>
 
 41. 常见的替换元素有哪些？它们与非替换元素最大的区别什么？
-  * 常见的替换元素有：<img> <video> <embed> <iframe>
+  * 常见的替换元素有：<img> <video> <embed> <iframe> <input>
+  * 区别：
+    * 有内在宽高
+    * 一般没有后代元素
+
   * 替换元素与非替换元素最大的区别:可替换元素（replaced element）的展现效果不是由 CSS 来控制的。这些元素是一种外部对象，它们外观的渲染，是独立于 CSS 的。它们的内容不受当前文档的样式的影响。CSS 可以影响可替换元素的位置，但不会影响到可替换元素自身的内容。非替换元素的内容不受当前文档的样式的影响。
 
 42. 让 CSS 在 HTML 页面上生效有哪些方法，分别写出来。
@@ -356,16 +438,19 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
     /* a.css的内容 */
     @import "b.css";
     ```
-  * a.css 的路径：http://user.coding.me/task/
-  * b.css 的路径：http://user.coding.me/task/a.css
+  * a.css 的路径：http://user.coding.me/a.css
+  * b.css 的路径：http://user.coding.me/b.css
 
 45. 写出满足如下条件的选择器
-    * 第  8个子结点之后，倒数第 5 个子结点之前的li结点  li:nth-child(n+8):nth-last-child(n+5) {}
-    * 【类名】以“damiao-”开头的元素           [class^="damiao-"] {}
+    * 第  8个子结点之后，倒数第 5 个子结点之前的li结点  li:nth-child(n+8):nth-last-child(-n+5) {}
+    * 【类名】以“damiao-”开头的元素           [class^="damiao-"],
+                                            [class*=" damiao-"] {}
+
+
     * rel 属性中有 nofollow 这个单词的标签    [rel~=nofollow] {}
 
 46. 链接伪类的几种状态书写的顺序是什么？为什么？
-  * 链接的伪类书写顺序：link-visited-hover-active
+  * 链接的伪类书写顺序：link-visited-hover-active   LV  f HA
   * 原因：标签拥有 href 属性是显示:link 或者 :visited的前提，
     :active伪类需要放在:hover伪类后面，因为当鼠标点击a标签的时候触发了:active同时也触发了:hover，如果:hover写在:active就会把:active的显示样式给覆盖，就是永远也看不到:active的点击样式
     :visited伪类需要放置在:hover前面，因为如果将:hover放置在:visited之前，:visited触发的链接会一开始就将:hover覆盖。
@@ -383,6 +468,14 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
     * font: bold 24px/1.2 serif;  正确
 
 48. 详述你对盒模型的理解。
+  * 每个元素都会生成一个或多个矩形，这些矩形可以嵌套
+  * 每个矩形框可以有可选的 外边距 边框 内边距
+  * 外边距可以为负，另外两者不行
+  * 可以为每个盒子设置宽高，用width，height属性
+  * 宽高实际设置的是哪个盒子的大小取决于box-sizing属性的值
+可以是border-box的宽高，也可以是content-box的
+
+
   * 当你的浏览器展现一个元素时，这个元素会占据一定的空间。这个空间由四部分组成。
     中间是元素呈现内容的区域。这个区域的外面是内边距。再外面是边框。最外面的是外边距，外边距将该元素与其它元素分开。
     内边距，边框和外边距在元素的上、右、下、左都可以有不同的大小。所有这些大小值都可以为0。
@@ -394,21 +487,28 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
     * 标准模型的宽度、高度=2 x (padding + border) + content box
 
 49. 元素的高度写百分比在什么情况下【无效】，为什么？在什么情况下【有效】，有效时是以哪个元素的高度为基准值？
-  * 非定位元素写百分比是无效的。
+
+
+  * 在父元素的高度由子元素撑起时，无效。（ 非定位元素写百分比是无效的。在父元素的高度也为 auto时）
+  * 在父元素的高度不由子元素撑起时，有效
+
   * 原因：它的高度会影响父元素，而父元素被它撑高后又会反过来影响它，逻辑上就不成立
   * 定位元素写百分比相对于其定位祖先是有效，以其定位祖先元素的高度为基准值
 
 50. 字体的 italic 与 oblique 的区别是？
-  * italic是另一个专门设计好的斜体字体
+  * italic是一个专门设计好的斜体字体
     * 比如正常字体是 Roboto
       则italic字体可能会是 Roboto Italic，Roboto Cursive
   * 而oblique则是在正体的文字基础上变幻出来的一个斜体字
     * oblique则一般会map到Roboto Slanted，Roboto Incline， Roboto Oblique
 
 51. 什么是模拟信号？什么是数字信号？它们的区别是？
-  * 模拟信号（Analog Signal）是指在时域上数学形式为连续函数的讯号。
-  * 数字信号是离散时间讯号(Discrete-time signal)的数位化表示。
-  * 区别：数字信号采取分立的逻辑值取值只在某些固定的时间点有意义，而模拟信号可以取得连续值。
+  * 模拟信号（Analog Signal）是指在时域上数学形式为连续函数的信号。
+  * 数字信号是离散时间信号(Discrete-time signal)的数字化表示。
+  * 区别：数字信号可以几乎完全消除误差，而模拟信号会被干扰。
+          数字信号的传输距离近，抗干扰能力弱；模拟信号的传输距离远，抗干扰能力强。
+
+          采取分立的逻辑值取值只在某些固定的时间点有意义，而模拟信号可以取得连续值。
 
 52. 将如下 markdown 转换成 html
     ```md
@@ -479,7 +579,7 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
     <li>来暖气了</li>
     <li>开空调了</li>
   </ul>
-  <q>知识就是力量，法国就是培根。</q>
+  <blockquote>知识就是力量，法国就是培根。</blockquote>
   <a href="http://baike.baidu.com/item/%E6%98%A5/6983693">春</a>
   <img src="https://www.google.com.hk/images/nav_logo242_hr.png" alt="春">
 </body>
@@ -507,6 +607,7 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
       <button>提交</button>
     </form>
     ```
+    * https://www.baidu.com/s?a=bb&b=123&b=456&c=on&select=03
 
 54. 列出 input 的 type 有哪些值，以及为各个值时分别需要怎么使用。
   * button：无缺省行为按钮。
@@ -519,7 +620,7 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
   * hidden：不显示在页面上的控件，但它的值会被提交到服务器。
   * image：图片提交按钮。必须使用 src 属性定义图片的来源及使用 alt 定义替代文本。还可以使用 height 和 width 属性以像素为单位定义图片的大小。
   * month：HTML5 用于输入年月的控件，不带时区。
-  * number: HTML5 用于输入浮点数的控件。
+  * number: HTML5 用于输入浮点数的控件 max min属性。
   * password：一个值被遮盖的单行文本字段。使用 maxlength 指定可以输入的值的最大长度 。
   * radio：单选按钮。必须使用 value 属性定义此控件被提交时的值。
   * submit：用于提交表单的按钮。
@@ -527,18 +628,26 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
   * text：单行字段；换行会将自动从输入的值中移除。
 
 55. 想要让一个文本输入框在页面打开后自动获得光标要怎么办？
-  * a:focus 光标在input元素里，有tabindex属性的元素点击一下以后
+  * autofocus
+  (* a:focus 光标在input元素里，有tabindex属性的元素点击一下以后)
 
 56. 如何在文本框里放置提示性文字？
   * 使用文本框的placeholder属性来解决。占位符
     <input type="text" placeholder="提示性文字">
 
 57. option 标签的主体内容太长影响用户体验，你会如何解决？
-  * 将<option>放入<optgroup>标签中
+  * 将内容截断只展示一部分，但将完整内容写在title属性上
+  <!-- （* 将<option>放入<optgroup>标签中） -->
 
 58. 想要在 textarea 标签中默认显示一段 html 代码最安全的做法是什么？
-  * 消除<textarea>……</textarea>之间所有多余的空格和换行
-  * 或者 "textarea content".replaceAll(" ","&nbsp").replaceAll("\r","<br/>");
+  * 转义开始的尖括号 &lt;
+    <textarea>
+
+      <span>&lt;/textarea>
+    </textarea>
+
+  <!-- * 消除<textarea>……</textarea>之间所有多余的空格和换行
+  * 或者 "textarea content".replaceAll(" ","&nbsp").replaceAll("\r","<br/>"); -->
 
 59. 如何禁用一组输入框？
   * 使用fieldset 字段组 用来把 一组 输入域 放在一起的；
@@ -599,16 +708,16 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
 
   * html：HyperText Markup Language
   * div: division
-  * p: parge
+  * p: paragraph
   * a: anchor
   * em: element
   * tr: row of cells in a table
   * th: header of a group of table cells
   * td: data cell
   * col: column
-  * ul: unorder list
-  * ol: order list
-  * li: an item in a list
+  * ul: unordered list
+  * ol: ordered list
+  * li: list item
   * dl: description list
   * dt: a term in a description or definition list
   * dd: the description, definition, or value for the preceding term (<dt>) in a description list (<dl>).
@@ -622,7 +731,7 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
   * src: source
 
 62. 请说出你对命令行程序的理解，以及其与 GUI 程序的区别
-  * CLI - Command Line Interface，命令行界面 , 命令行程序通过输入命令行来运行操作程序
+  * 命令行程序,一个命令对应一个程序，只不过没有界面，只有文字输出，通过命令参数来调整其行为
   * GUI - Graphics User Interface，图形化**用户**界面/接口，GUI 程序可以直接通过鼠标键盘的点击输入即可操作程序
   * GUI程序与CLI程序唯一的区别就在于形式不一样
 
@@ -635,17 +744,19 @@ html实体是以&开头以;结尾的字符串，可以用来表示任意字符�
   * 特殊内容类: meta, option
 
 64. 解释 box-sizing 可以取哪些值，以及每个值的意义
-  * Content box: 这个区域是用来显示内容，大小可以通过设置 width 和 height.
+  * border-box width/height属性设置其宽高
+  * content-box width/height属性设置其宽高
+  <!-- * Content box: 这个区域是用来显示内容，大小可以通过设置 width 和 height.
   * Padding box: 包围在内容区域外部的空白区域； 大小通过 padding 相关属性设置。
   * Border box: 边框盒包裹内容和内边距。大小通过 border 相关属性设置。
-  * Margin box: 这是最外面的区域，是盒子和其他元素之间的空白区域。大小通过 margin 相关属性设置。
+  * Margin box: 这是最外面的区域，是盒子和其他元素之间的空白区域。大小通过 margin 相关属性设置。 -->
 
 65. 简述 ie7 市场份额比 ie6 低的原因并在网络上找出目前各大浏览器在中国和全球的市场份额
   * ie7 市场份额比 ie6 低的原因:国内盗版XP系统很多的问题。肯定有很多老机器只能用IE 6，原因就是盗版XP了，因为XP在国内太受欢迎了 ，XP用户现在还是第一大。但事实上你应该懂的，国内估计百分之七八十的XP都是盗版吧，盗版系统直接关闭了系统更新，否则很多IE 6都可以升级到IE7， 8，甚至更高。
   * 2019年6月份浏览器占有率为例。在全球市场范围上，Chrome占有率达到了61.55%，紧随其后的是Safarihe和Firefox。
     在中国市场上，Chrome的占有率第一也达到了惊人的50.56%，UC和Safarihe分别位列第二第三。
 
-66. 画出如下代码中 div 及其子元素的渲染结果，并指出 p 标签中【每个行内元素的，内容区，行内框的范围】，p 元素的行框，并指明理论的行框高度。有尺子的可以以 1mm 为 2px 来绘制。
+66. 画出如下代码中 div 及其子元素的渲染结果，并指出 p 标签中【每个行内元素的，内容区，行内框的范围】，p 元素的行框，并指明理论的行框高度。有尺子的可以以 1mm 为 2px 来绘制。   行框高度为86px
     ```html
     <!DOCTYPE html>
     <html>
