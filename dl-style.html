@@ -7,74 +7,43 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>dl-style</title>
   <style>
-    dl {
-      width: 100%;
+    * {
+      background-color: rgba(0, 0, 0, 0.1);
     }
 
-    dl:after {
-      content: "";
-      display: table;
+    * {
+      background-color: rgba(0, 0, 0, 0.1);
     }
 
     h1 {
       text-align: center;
     }
 
-    dd {
-      padding: .5em 0;
-    }
-
-    dt,
-    dd {
-      display: inline-block;
-      width: 30%;
+    dl {
+      padding-left: 80px;
     }
 
     dt {
-      margin: 1em auto 1em auto;
+      width: 30px;
       text-align: right;
-      font-weight: bold;
-      float: left;
+      margin-left: -70px;
+      height: 0;
+    }
+
+    dt::after {
+      content: ':';
     }
 
     dd {
-      float: left;
-      width: 70%;
-      padding-left: 1em;
-    }
-
-    dd+dd {
-      float: right;
-    }
-
-    dt:first-child {
-      padding-top: .5em;
-    }
-
-    dd+dt {
-      padding-top: .5em;
-    }
-
-    dt+dt {
-      width: 100%;
-      float: none;
-      padding: 0 70% 0 0;
-    }
-
-    dt+dt+dd {
-      margin-top: -2em;
-    }
-
-    dt+dt+dd+dt {
-      margin-top: 2em;
+      margin-left: 0;
+      display: inline-block;
     }
   </style>
 </head>
 
 <body>
+  <h1>Chrome & Firefox</h1>
   <dl>
-    <h1>Chrome & Firefox</h1>
-
     <dt>Chrome</dt>
     <dd>A free, open source, cross-platform, graphical web browser developed by the Google,</dd>
     <dd>Now more simple, secure, and faster than ever - with help from Google built‑in,</dd>
