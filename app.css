@@ -48,7 +48,14 @@ ul {
     /* padding-inline-start: 40px; */
 }
 
-/* 顶部logo */
+.container-md {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+  }
+
+/* 页面顶部logo */
 .top-logo {
   position: absolute;
   z-index: 1000;
@@ -63,7 +70,6 @@ ul {
   line-height: 1;
   padding: 8px 20px;
   display: block;
-
   }
 
 .top-logo .logo-links a img {
@@ -144,7 +150,7 @@ ul {
   }
 
 
-  /* 图上的文字和按钮 */
+  /* 主图上的文字和按钮 */
 
 .hero-landing-wrap {
   color: #fff;
@@ -168,10 +174,10 @@ ul {
   -webkit-box-pack: center;
   justify-content: center;
 
-      position: relative;
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 20px;
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
   }
 
 
@@ -184,90 +190,13 @@ ul {
 }
 }
 
-.heading-wrap {
-  z-index: 30;
-}
-
-.hero-landing h1 {
-  font-size: 360%;
-  font-weight: bold;
-
-  margin-left: -2px;
-
-  letter-spacing: -.04em;
-  -webkit-hyphens: none;
-          hyphens: none;
-
-  -webkit-font-smoothing: antialiased;
-      -ms-hyphens: none;
-  }
-
-
-
-  .headline-news {
-  position: relative;
-  z-index: 40;
-
-  padding: 10px;
-
-  /* transition: background-color .2s ease, -webkit-transform .4s ease .2s;
-  transition: transform .4s ease .2s, background-color .2s ease; */
-  transition: transform .4s ease .2s, background-color .2s ease, -webkit-transform .4s ease .2s;
-  /* -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-
-  background: rgba(0, 0, 0, .04); */
-  }
-.headline-news.on {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  }
-@supports (-webkit-backdrop-filter: blur(2px)) {
-  .headline-news {
-    background: rgba(0, 0, 0, .15);
-
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
-    }
-  }
-.headline-news a {
-  display: -webkit-box;
-  display: flex;
-
-  -webkit-box-align: center;
-  align-items: center;
-  }
-.headline-news .headline-icon {
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 18px;
-
-  padding: 0 8px;
-
-  text-transform: uppercase;
-
-  border-radius: 4px;
-  background: linear-gradient(to bottom, #ec614f 0%, #ff2e2e 100%);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
-  }
-.headline-news .headline-text {
-  margin-left: .5em;
-
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .2);
-  }
-
-
-
-
-
 
 .font-logo {
   font-family: Overpass, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', Arial, Verdana, sans-serif;
   font-weight: normal;
   }
 
-  .btn {
+.btn {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -317,10 +246,82 @@ ul {
   border-radius: 6px;
   }
 
+.heading-wrap {
+  z-index: 30;
+}
+
+.hero-landing h1 {
+  font-size: 360%;
+  font-weight: bold;
+
+  margin-left: -2px;
+
+  letter-spacing: -.04em;
+  -webkit-hyphens: none;
+          hyphens: none;
+
+  -webkit-font-smoothing: antialiased;
+      -ms-hyphens: none;
+  }
 
 
+  /* news模块 */
+  .headline-news {
+  position: relative;
+  z-index: 40;
 
-  /* 主页下部 */
+  padding: 10px;
+
+  /* transition: background-color .2s ease, -webkit-transform .4s ease .2s;
+  transition: transform .4s ease .2s, background-color .2s ease; */
+  transition: transform .4s ease .2s, background-color .2s ease, -webkit-transform .4s ease .2s;
+  /* -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+
+  background: rgba(0, 0, 0, .04); */
+  }
+
+.headline-news {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  }
+@supports (-webkit-backdrop-filter: blur(2px)) {
+  .headline-news {
+    background: rgba(0, 0, 0, .15);
+
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    }
+  }
+.headline-news a {
+  display: -webkit-box;
+  display: flex;
+
+  -webkit-box-align: center;
+  align-items: center;
+  }
+.headline-news .headline-icon {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 18px;
+
+  padding: 0 8px;
+
+  text-transform: uppercase;
+
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #ec614f 0%, #ff2e2e 100%);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+  }
+.headline-news .headline-text {
+  margin-left: .5em;
+
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  }
+
+
+  /* 主页下部推广模块 */
 
   .hero-promos .promo {
   float: left;
@@ -374,7 +375,9 @@ ul {
   margin-bottom: 0;
   }
 
-/* 标签链接 */
+
+
+  /* 链接标签模块 */
 .meta-links-wrap {
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
@@ -448,8 +451,6 @@ ul {
   }
 
 
-
-
   /* 页脚 */
   .footer-wrap {
     position: relative;
@@ -460,218 +461,144 @@ ul {
 .footer {
   display: -webkit-box;
   display: flex;
-
   padding-top: 45px;
   padding-bottom: 45px;
-
   flex-wrap: wrap;
   }
+
 .footer ul {
   list-style: none;
   }
+
 .footer .main-links {
   margin-right: 40px;
-
   -webkit-box-flex: 2;
   flex-grow: 2;
   }
+
 @media (max-width: 640px) {
   .footer .main-links {
     margin-bottom: 40px;
     }
   }
+
 .footer .main-links li {
   line-height: 2.3;
   }
+
 .footer .main-links a {
   margin-bottom: 10px;
   }
+
 .footer .main-links .font-logo {
   display: block;
-
   width: 160px;
   /*height: 61px;*/
 
   text-indent: -99999px;
-
   background-repeat: no-repeat;
   background-size: contain;
   }
+
 .footer .main-links .icon-phone-bold {
   vertical-align: -1px;
   }
+
 .footer .main-links .icp {
   font-size: 12px;
-
   margin-top: 4px;
-
   color: #aaa;
   }
+
 @media (max-width: 640px) {
   .footer .main-links .icp {
     margin-bottom: 10px;
     }
   }
+
 .footer .main-links .beian-icon {
   display: inline-block;
-
   width: 15px;
   height: 15px;
-
   vertical-align: -3px;
-
   background-repeat: no-repeat;
   background-size: contain;
   }
+
 .footer .footer-list-wrap {
   display: -webkit-box;
   display: flex;
-
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-wrap: wrap;
   }
+
 @media (min-width: 641px) {
   .footer .footer-list-wrap {
     -webkit-box-flex: 0;
     flex-grow: 0;
     }
   }
+
 .footer .footer-list {
   font-size: 15px;
-
   margin-bottom: 40px;
-
   flex-basis: 50%;
   }
+
 @media (min-width: 641px) {
   .footer .footer-list {
     margin-bottom: 0;
     margin-left: 8vw;
-
     flex-basis: auto;
     }
+
   .footer .footer-list:first-child {
     margin-left: 0;
     }
   }
+
 .footer .footer-list h3 {
   font-weight: bold;
-
   margin-bottom: 10px;
   }
+
 .footer .footer-list ul li {
   line-height: 2;
   }
+
 .footer .footer-list ul li a:hover,
 .footer .footer-list ul li a:focus {
   color: #e23d0e;
   }
+
 .footer .footer-list .wechat {
   cursor: pointer;
   }
+
 .footer-miscs {
   border-top: 1px solid #eee;
   }
+
 .footer-miscs .footer-list-wrap img {
   display: block;
   }
+
 .footer-badges {
   -webkit-box-align: center;
   align-items: center;
   }
+
 .footer-badges .footer-badge {
   margin: 0 10px;
   }
+
 @media (max-width: 640px) {
   .footer-badges .footer-badge {
     margin-right: 10px;
     margin-left: 0;
     }
   }
-.page-news .intro-section-wrap .item {
-  margin-bottom: 40px;
-  }
-.page-news .intro-section-wrap .item h3 {
-  margin-bottom: 0;
-  }
-.page-news .intro-section-wrap .item .meta {
-  font-size: 16px;
 
-  opacity: .4;
-  }
-.page-about .intro-section .intro-text h3 {
-  margin-top: -10px;
-  }
-.page-awards .award-item {
-  margin: 4vw 0;
-  }
-.page-awards .award-item-image {
-  text-align: center;
-  }
-@media (max-width: 640px) {
-  .page-awards .award-item-image {
-    margin-top: 8vw;
-    padding-top: 8vw;
-
-    text-align: left;
-
-    border-top: 1px solid #eee;
-    }
-  }
-.page-awards .award-item-image img {
-  max-width: 160px;
-  max-height: 140px;
-  }
-.swiper-guide {
-  width: 100%;
-  height: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  }
-.swiper-guide .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  }
-.swiper-guide .swiper-button-white {
-  transition: opacity .2s ease;
-  pointer-events: none;
-
-  opacity: 0;
-  }
-.swiper-guide:hover .swiper-button-white,
-.swiper-guide:focus .swiper-button-white {
-  pointer-events: auto;
-
-  opacity: 1;
-  }
-.phone-wrapper {
-  position: relative;
-
-  margin-top: -156px;
-  }
-.swiper-guide-content {
-  position: absolute;
-  z-index: 51;
-  top: 113px;
-  left: 77px;
-
-  width: 228px;
-  height: 405px;
-  }
-.swiper-guide-text {
-  box-sizing: border-box;
-  height: 20%;
-  padding: 10px 0;
-  }
-.swiper-guide-text .swiper-slide {
-  width: 100%;
-  height: 100%;
-
-  opacity: .4;
-  }
-.swiper-guide-text .swiper-slide-active {
-  opacity: 1;
-  }
 
 
