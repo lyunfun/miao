@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+    }
+
+body {
+  height: 100%;
+  background-color:#00BFA5;
+}
+
+.container {
+  background: rgba(200, 200, 200, .9);
+  padding: 4em 0 2em 1em;
+   }
+
+@media(max-width:550px) {   /*会生效的最大宽度为550px*/
+    .container {
+        font-size: 12px;
+        width: 100%;
+    }
+}
+
+.container {
+  padding: 2em;
+  display: inline-block;
+}
+
+.container .clock {
+  height: 20em;
+  width: 20em;
+  padding: 0;
+  margin: 0;
+}
+
+@media(max-width:550px) {   /*会生效的最大宽度为550px*/
+  .container .clock {
+      font-size: 12px;
+    }
+}
+
+@media(max-width:420px) {   /*会生效的最大宽度为420px*/
+  .container .clock {
+      font-size: 10px;
+    }
+}
+
+.clock {
+  border-radius: 50%;
+  background: radial-gradient(#000, #000 0.1em, #fff 0.1em, #fff), #fff;
+  display: inline-block;
+  padding-bottom: 31%;
+  position: relative;
+  width: 31.333%;
+  opacity: 1;
+  background: #fff url(https://cssanimation.rocks/images/posts/clocks/ios_clock.svg) no-repeat center;
+  background-size: 90%;
+  transition: all 2.5s cubic-bezier(.12, 1.03, .34, 1);
+}
+.clock::before {      /*添加伪元素制作时钟中心的黑色圆点*/
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6%;
+  height: 6%;
+  z-index: 0;  /*将黑色圆点放在时钟指针的后面*/
+   }
+
+.clock::after {     /*添加伪元素制作秒针的红色圆点*/
+  background: red;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5%;
+  height: 2.5%;
+  z-index: 10;     /*将秒针红点置于时钟最前面*/
+}
+
+      /* 指针部分 */
+.minutes-container,
+.hours-container,
+.seconds-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hours {
+  background: #000;
+  width: 2%;
+  height: 20%;
+  position: absolute;
+  left: 49%;
+  top: 30%;
+  transform-origin: 50% 100%;
+  border-radius: 85%/10%;
+}
+
+.minutes {
+  background: #000;
+  width: 2%;
+  height: 35%;
+  position: absolute;
+  left: 49%;
+  top: 15%;
+  transform-origin: 50% 100%;
+  border-radius: 150%/10%;
+}
+
+.seconds {
+  background: red;
+  width: 1%;
+  height: 30%;
+  position: absolute;
+  left: 49.5%;
+  top: 20%;
+  transform-origin: 50% 100%;
+  z-index: 8;
+  border-radius: 200%/10%;
+}
+
+/* 旋转动画 */
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hours-container {
+  animation: rotate 43200s infinite linear;
+}
+.minutes-container {
+  animation: rotate 3600s infinite steps(60);
+}
+.seconds-container {
+  animation: rotate 60s infinite steps(60);
+}
