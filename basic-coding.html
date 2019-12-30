@@ -38,9 +38,9 @@
 </script>
 
 <script id="ch0103/06">
-  var a = Math.trunc(Number(prompt()));
-  var b = Math.trunc(Number(prompt()));
-  var c = a / b;
+  var a = Number(prompt());
+  var b = Number(prompt());
+  var c = b / a;
   var c = c.toFixed(3);
   console.log((c * 100) + '%');
 </script>
@@ -57,7 +57,7 @@
 </script>
 
 <script id="ch0103/08">i
-  var f = prompt();
+  var f = Number(prompt());
   var c = 5 * (f - 32) / 9;
   var c = c.toFixed(5);
   console.log(c);
@@ -86,7 +86,7 @@
   var a = Number(prompt());
   var b = Number(prompt());
   var c = Math.trunc(a / b);
-  console.log(a - bc);
+  console.log(a - b * c);
 </script>
 
 <script id="ch0103/12">
@@ -119,7 +119,7 @@
   var n = Number(prompt());
   var x = Number(prompt());
   var y = Number(prompt());
-  var a = Math.floor(n - x * y);
+  var a = Math.floor(n - y / x);
   console.log(a);
 </script>
 
@@ -366,12 +366,12 @@
   else if (n > 1000) {
     if (a == 'y') {
       var b = 8 + 5 + (n - 1000) / 500 * 4;
-      var b = Math.ceil(b);
+      var b = Math.round(b);
       console.log(b);
     }
     else {
       var b = 8 + (n - 1000) / 500 * 4;
-      var b = Math.ceil(b);
+      var b = Math.round(b);
       console.log(b);
     }
   }
