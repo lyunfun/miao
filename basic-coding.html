@@ -1,23 +1,23 @@
 <script id="ch0103/01">
-  var A = Math.trunc(Number(prompt()));
-  var B = Math.trunc(Number(prompt()));
+  var A = Number(prompt());
+  var B = Number(prompt());
   var Sum = A + B;
   console.log(Sum);
 </script>
 
 <script id="ch0103/02">
-  var a = Math.trunc(Number(prompt()));
-  var b = Math.trunc(Number(prompt()));
-  var c = Math.trunc(Number(prompt()));
+  var a = Number(prompt());
+  var b = Number(prompt());
+  var c = Number(prompt());
   var d = (a + b) * c;
   console.log(d);
 </script>
 
 <script id="ch0103/03">
-  var a = Math.trunc(Number(prompt()));
-  var b = Math.trunc(Number(prompt()));
-  var c = Math.trunc(Number(prompt()));
-  var d = (a + b) / c;
+  var a = Number(prompt());
+  var b = Number(prompt());
+  var c = Number(prompt());
+  var d = Math.trunc((a + b) / c);
   console.log(d);
 </script>
 
@@ -41,7 +41,7 @@
   var a = Math.trunc(Number(prompt()));
   var b = Math.trunc(Number(prompt()));
   var c = a / b;
-  var c = c.toFixed(5);
+  var c = c.toFixed(3);
   console.log((c * 100) + '%');
 </script>
 
@@ -57,22 +57,21 @@
 </script>
 
 <script id="ch0103/08">i
-  var f = prompt("请输入华氏温度", 50);
-  var c;
-  c = 5 / 9 * (f - 32);
-  var c = c.toFixed(6);
+  var f = prompt();
+  var c = 5 * (f - 32) / 9;
+  var c = c.toFixed(5);
   console.log(c);
 </script>
 
 <script id="ch0103/09">
-  var r = prompt();
+  var r = Number(prompt());
   var d = 2 * r;
   var c = Math.PI * d;
   var s = Math.PI * r * r;
   var d = d.toFixed(4);
   var c = c.toFixed(4);
   var s = s.toFixed(4);
-  console.log(d + ' ' + c + ' ' + s)
+  console.log(d + ' ' + c + ' ' + s);
 </script>
 
 <script id="ch0103/10">
@@ -86,13 +85,13 @@
 <script id="ch0103/11">
   var a = Number(prompt());
   var b = Number(prompt());
-  var c = a % b;
-  console.log('%g', c);
+  var c = Math.trunc(a / b);
+  console.log(a - bc);
 </script>
 
 <script id="ch0103/12">
   var r = Number(prompt());
-  var v = 4 / 3 * Math.PI * r ^ 3;
+  var v = 4 / 3 * 3.14 * r ** 3;
   var v = v.toFixed(2);
   console.log(v);
 </script>
@@ -112,7 +111,7 @@
   var h = Number(prompt('输入h'));
   var r = Number(prompt('输入r'));
   var v = Math.PI * (r ** 2) * h * 0.001;
-  var n = Math.trunc(20 / v);
+  var n = Math.ceil(20 / v);
   console.log(n);
 </script>
 
@@ -120,7 +119,7 @@
   var n = Number(prompt());
   var x = Number(prompt());
   var y = Number(prompt());
-  var a = n - x * y;
+  var a = Math.floor(n - x * y);
   console.log(a);
 </script>
 
@@ -351,7 +350,7 @@
 </script>
 
 <script id="ch0104/14">
-  var n = Math.trunc(Number(prompt()));
+  var n = Number(prompt());
   var a = String(prompt('y or n'));
   var b = Number();
   if (n <= 1000) {
@@ -367,10 +366,12 @@
   else if (n > 1000) {
     if (a == 'y') {
       var b = 8 + 5 + (n - 1000) / 500 * 4;
+      var b = Math.ceil(b);
       console.log(b);
     }
     else {
       var b = 8 + (n - 1000) / 500 * 4;
+      var b = Math.ceil(b);
       console.log(b);
     }
   }
