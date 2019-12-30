@@ -356,6 +356,8 @@
   var n = Number(prompt());
   var a = String(prompt('y or n'));
   var b = Number();
+  var c = (n - 1000) / 500;
+  var c = Math.ceil(c);
   if (n <= 1000) {
     if (a == 'y') {
       var b = 8 + 5;
@@ -368,13 +370,14 @@
   }
   else if (n > 1000) {
     if (a == 'y') {
-      var b = 8 + 5 + (n - 1000) / 500 * 4;
-      var b = Math.round(b);
+      var c
+      var b = 8 + 5 + c * 4;
+      var b = Math.ceil(b);
       console.log(b);
     }
     else {
-      var b = 8 + (n - 1000) / 500 * 4;
-      var b = Math.round(b);
+      var b = 8 + c * 4;
+      var b = Math.ceil(b);
       console.log(b);
     }
   }
