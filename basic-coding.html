@@ -493,9 +493,11 @@
 </script>
 
 <script id="ch0104/21">
-  var n = Math.trunc(Number(prompt()));
-  var x = Math.trunc(Number(prompt()));
-  var y = Math.trunc(Number(prompt()));
-  var z = n - y / x;
+  var n = Number(prompt());
+  var x = Number(prompt());
+  var y = Number(prompt());
+  var m = y / x;
+  var m = Math.ceil(m);
+  var z = n - m;
   console.log(z);
 </script>
