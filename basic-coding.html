@@ -178,7 +178,7 @@
 </script>
 
 <script id="ch0104/01">
-  var N = Math.trunc(Number(prompt()));
+  var N = Number(prompt());
   if (N > 0) {
     console.log("positive");
   }
@@ -186,7 +186,7 @@
     console.log("zero");
 
   }
-  else {
+  else if (n < 0) {
     console.log("negative");
   }
 </script>
@@ -224,8 +224,8 @@
 </script>
 
 <script id="ch0104/05">
-  var x = Math.trunc(Number(prompt()));
-  var y = Math.trunc(Number(prompt()));
+  var x = Number(prompt());
+  var y = Number(prompt());
   if (x > y) {
     console.log('>');
   }
@@ -248,8 +248,8 @@
 </script>
 
 <script id="ch0104/07">
-  var a = Math.trunc(Number(prompt()));
-  var b = Math.trunc(Number(prompt()));
+  var a = Number(prompt());
+  var b = Number(prompt());
   if (a >= 10 || b >= 20) {
     console.log('1');
   }
@@ -259,7 +259,7 @@
 </script>
 
 <script id="ch0104/08">
-  var a = Math.trunc(Number(prompt()));
+  var a = Number(prompt());
   if (a % 3 == 0 && a % 5 == 0) {
     console.log('YES');
   }
@@ -269,7 +269,7 @@
 </script>
 
 <script id="ch0104/09">
-  var a = Math.trunc(Number(prompt()));
+  var a = Number(prompt());
   if (a % 3 == 0 && a % 5 == 0 && a % 7 == 0) {
     console.log(3 + ' ' + 5 + ' ' + 7)
   }
@@ -301,9 +301,9 @@
 </script>
 
 <script id="ch0104/10">
-  var a = Math.trunc(Number(prompt()));
-  var b = Math.trunc(Number(prompt()));
-  if (a < 60 || b < 60) {
+  var a = Number(prompt());
+  var b = Number(prompt());
+  if ((a < 60 && b >= 60) || (a >= 60 && b < 60)) {
     console.log(1);
   }
   else {
@@ -581,16 +581,32 @@
 
 <script id="ch0105/07">
   var n = Number(prompt());
-  var gold = [];
-  var silver = [];
-  var copper = [];
+  var golds = Number();
+  var silvers = Number();
+  var coppers = Number();
   for (var i = 0; i < n; i++) {
-    var m = Number(prompt());
-    var gm = m.toString();
-    gold.push(gm);
-    silver.push(gm);
-    copper.push(gm);
-
+    var gold = Number(prompt());
+    var silver = Number(prompt());
+    var copper = Number(prompt());
+    golds += gold;
+    silvers += silver;
+    coppers += copper;
+    sum = golds + silvers + coppers;
   }
+  console.log(golds + ' ' + silvers + ' ' + coppers + ' ' + sum)
+</script>
+
+<script id="ch0105/08">
+  var n = Number(prompt());
+  var sum = (n - 2) * 180;
+  var a = Number();
+  for (var i = 0; i < n - 1; i++) {
+    var m = Number(prompt());
+    a += m;
+  }
+  console.log(sum - a);
+</script>
+
+<script>
 
 </script>
