@@ -539,5 +539,58 @@
   var a = sum / n;
   var a = a.toFixed(4);
   console.log(a);
+</script>
+
+<script id="ch0105/04">
+  var n = Number(prompt());
+  var sum = Number();
+  for (var i = 0; i < n; i++) {
+    var m = Number(prompt());
+    sum += m;
+  }
+  var a = sum / n;
+  var a = a.toFixed(5);
+  console.log(sum + ' ' + a);
+</script>
+
+<script id="ch0105/05">
+  var n = Number(prompt());
+  var goals = [];
+  for (var i = 0; i < n; i++) {
+    var m = Number(prompt());
+    var a = m.toString();
+    goals.push(m);
+  }
+  var max = Math.max(...goals);
+  console.log(max);
+</script>
+
+<script id="ch0105/06">
+  var n = Number(prompt());
+  var goals = [];
+  for (var i = 0; i < n; i++) {
+    var m = Number(prompt());
+    var a = m.toString();
+    goals.push(m);
+  }
+  var max = Math.max(...goals);
+  var min = Math.min(...goals);
+  var x = max - min;
+  console.log(x);
+</script>
+
+<script id="ch0105/07">
+  var n = Number(prompt());
+  var gold = [];
+  var silver = [];
+  var copper = [];
+  for (var i = 0; i < n; i++) {
+    var m = Number(prompt());
+    var gm = m.toString();
+    gold.push(gm);
+    silver.push(gm);
+    copper.push(gm);
+
+  }
 
 </script>
