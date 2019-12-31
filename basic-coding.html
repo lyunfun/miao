@@ -690,5 +690,185 @@
 </script>
 
 <script id="ch0105/14">
+  var x = Number(prompt());
+  var n = Number(prompt());
+  var m = Number();
+  for (i = 0; i < n; i++) {
+    x = x + x * 0.001;
+  }
+  var x = x.toFixed(4);
+  console.log(x);
+</script>
+
+<script id="ch0105/15">
+  var R = Number(prompt());
+  var M = Number(prompt());
+  var Y = Number(prompt());
+  for (i = 0; i < Y; i++) {
+    M = M * (1 + 0.01 * R)
+    // M = M + M * R * 0.01;
+  }
+  console.log(Math.trunc(M));
+</script>
+
+<script id="ch0105/16">
+  var N = Number(prompt());
+  var K = Number(prompt());
+  for (i = 0; i < 20; i++) {
+    M = N * i;
+    p = p * (1 + 0.01 * K);
+    if (M >= p) {
+      if (20 * N < p) {
+        console.log('Impossible');
+        break;
+      }
+      else {
+        console.log(i);
+      }
+    }
+    else {
+      continue;
+    }
+  }
+
+</script>
+
+<script id="ch0105/17">
+  var k = Number(prompt());
+  function fibonacci() {
+    var last = 1;
+    var last2 = 0;
+    current = Number();
+    var current = last2;
+    for (i = 1; i <= k; i++) {
+      last2 = last;
+      last = current;
+      current = last + last2;
+    }
+    return current;
+    console.log(current);
+  }
+  console.log(current);
+</script>
+
+
+<script id="ch0105/18">
+  var n = Number(prompt());
+  var h1 = Number(prompt());
+  var h2 = Number(prompt());
+  var x = h2 / h1;
+
+  for (i = 1; i < n; i++) {
+    var y1 = Number(prompt());
+    var y2 = Number(prompt());
+    var y = y2 / y1;
+    if ((y - x) > 0.05) {
+      console.log('better');
+    }
+    else if ((x - y) > 0.05) {
+      console.log('worse');
+    }
+    else {
+      console.log('same');
+    }
+  }
+</script>
+
+<script id="ch0105/19">
+  var n = Number(prompt());
+  var T = Number();
+  for (i = 0; i < n; i++) {
+    var x = Number(prompt());
+    var y = Number(prompt());
+    var m = Number(prompt());
+    var l = Math.sqrt(x ** 2 + y ** 2);
+    var t = l / 25 + 1.5 * m;
+    T = T + t;
+  }
+  var T = Math.ceil(T);
+  console.log(T);
+</script>
+
+<script id="ch0105/20">
+  var h = Number(prompt());
+  var l = 0;
+  for (i = 0; i < 10; i++) {
+    l += 1.5 * h;
+    h = h / 2;
+  }
+  var l = l.toFixed(4);
+  var h = h.toFixed(7);
+  console.log(l);
+  console.log(h);
+</script>
+
+<script id="ch0105/21">
+  var N = Number(prompt());
+  var m = N % 2;
+  var M = [];
+   if (m == 0) {
+     function getBaseLog(2,N) {
+       return Math.log(N) / Math.log(2);
+     }
+     var c =
+      for (i = 0; i < Math.log(N); i++) {
+        a = (N /= 2);
+        var a = a.toString();
+        var b = N.toString();
+        N = b + '/2=' + a;
+        M.push(N);
+     }
+    }
+
+    else {
+      N = N * 3 + 1;
+      for (i = 0; i < Math.log(N); i++) {
+        a = (N /= 2);
+        var a = a.toString();
+        var b = N.toString();
+        N = b + '/2=' + a;
+        M.push(N);
+      }
+    }
+    M.toString();
+    M = M.toString();
+    M.replace(',', '/n');
+    M = M.replace(',', '/n');
+    console.log(M);
+</script>
+
+<script id="ch0105/22">
+  var j = 0;
+  var k = 0;
+  var x = 0;
+  var y = 0;
+  for (i = 1; i <= 12; i++) {
+    var j = Number(prompt());
+    x += 300;
+    if (x < j) {
+      console.log('-' + i);
+    }
+    else {
+      x -= j;
+      k = x % 100;
+      y += x - k;
+      x = k;
+    }
+  }
+  console.log(x + y * 1.2)
+</script>
+
+<script id="ch0105/23">
+  var m =Number(prompt());
+  var n = Number(prompt());
+  var sum = 0;
+  for (i = 0; i < n; i++) {
+    var a = Number(prompt());
+    sum += a;
+    m -= a;
+    if (a > m) {
+      break;
+    }
+  }
 
 </script>
