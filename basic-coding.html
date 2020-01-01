@@ -817,15 +817,17 @@
 
 <script id="ch0105/20">
   var h = Number(prompt());
-  var l = 0;
-  for (i = 0; i < 10; i++) {
-    l += 1.5 * h;
-    h = h / 2;
+  var a = [];
+  a[1] = h;
+  var s = a[1];
+  for (i = 2; i <= 10; i++) {
+    a[i] = a[i - 1] / 2;
+    s += 2 * a[i];
   }
-  var l = l.toFixed(4);
-  var h = h.toFixed(7);
-  console.log(l);
-  console.log(h);
+  var s = s.toFixed(4);
+  var H = (a[10] / 2).toFixed(7);
+  console.log(s);
+  console.log(H);
 </script>
 
 <script id="ch0105/21">
