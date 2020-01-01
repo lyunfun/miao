@@ -754,20 +754,27 @@
 
 <script id="ch0105/17">
   var k = Number(prompt());
-  function fibonacci() {
-    var last = 1;
-    var last2 = 0;
-    current = Number();
-    var current = last2;
-    for (i = 1; i <= k; i++) {
-      last2 = last;
-      last = current;
-      current = last + last2;
-    }
-    return current;
-    console.log(current);
-  }
-  console.log(current);
+  var f = [];
+  f[1] = 1;
+  f[2] = 1;
+  for (i = 3; i <= k; i++) {
+    f[i] = f[i - 1] + f[i - 2];
+    console.log(f[k]);
+   }
+
+  //  方法二
+  // var k = Number(prompt());
+  //   var last = 1;
+  //   var last2 = 1;
+  //   current = Number();
+  //   var current = last2;
+  //   for (i = 3; i <= k; i++) {
+  //     last2 = last;
+  //     last = current;
+  //     current = last + last2;
+
+  //   }
+  //   console.log(current);
 </script>
 
 
