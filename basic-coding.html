@@ -862,13 +862,114 @@
   var m =Number(prompt());
   var n = Number(prompt());
   var sum = 0;
-  for (i = 0; i < n; i++) {
+  var count = 0;
+  for (i = 1; i <= n; i++) {
     var a = Number(prompt());
-    sum += a;
-    m -= a;
-    if (a > m) {
-      break;
+    if (a > m -sum) {
+      count++;
+    }
+    else {
+      sum += a;
     }
   }
+  console.log(count);
+</script>
 
+<script id="ch0105/24">
+  var n = Number(prompt());
+  var count = 0;
+  for (i = 0; i < n; i++){
+  var a = Number(prompt());
+  var b = Number(prompt());
+  if ((a > 90 && a < 140) && (b >= 60 && b <= 90)) {
+    count++;
+  }
+  else {
+    continue;
+  }
+}
+  console.log(count);
+</script>
+
+<script id="ch0105/25">
+  var x = Math.trunc(Number());
+  var y = Math.trunc(Number());
+  var z = Math.trunc(Number());
+  var i = Math.trunc(Number());
+  for (i = 101; i <= 666; i++){
+  x = i / 100;
+  y = i / 10;
+  if (x * 7 * 7 + y * 7 + z == z * 9 * 9 + y * 9 + x) {
+      break;
+    }
+}
+  console.log(x * 7 * 7 + y * 7 + z);
+  console.log(x + (y).toString() + z);
+  console.log(z + (y).toString() + x);
+</script>
+
+<script id="ch0105/26">
+  var n = Number(prompt());
+  var count = 0;
+  for (i = 0; i < n; i++) {
+    var m = Number(prompt());
+    var a = Math.trunc(m / 1000); //千位
+    var b = Math.trunc(m / 100) % 10; //百位
+    var c = Math.trunc(m / 10) % 10;  //十位
+    var d = m % 10; //个位
+    if ((d - a - b - c) > 0) {
+      count++;
+    }
+    else {
+      continue;
+    }
+  }
+  console.log(count);
+</script>
+
+<script id="ch0105/27">
+  var k = Number(prompt());
+  var n = 0;
+  var sn = 0;
+  while (sn <= k) {
+    n++;
+    sn += 1 / n;
+  }
+  console.log(n);
+</script>
+
+<script id="ch0105/28">
+  var n = Number(prompt());
+  var a = [];
+  while (n > 0) {
+    var b = (n % 10).toString();
+    a.push(b);
+    n = Math.trunc(n / 10);
+  }
+  a = a.toString();
+  a = a.replace(',2,',' 2 ');
+  console.log(a);
+</script>
+
+<script id="ch0105/30">
+  var m = Number(prompt());
+  var k = Number(prompt());
+  var t = 0;
+  var a = [];
+  m = m.toString();
+  a.push(m);
+  for (i = 0; i <= 5; i++) {
+    a[i];
+    var b = a[i];
+    b = b.toString();
+    if (b == '3') {
+       t++;
+     }
+   }
+  if ((m == 0) && (t == k)) {
+     console.log('YES');
+   }
+  else {
+     console.log('NO');
+   }
 </script>
