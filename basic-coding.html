@@ -714,22 +714,41 @@
 <script id="ch0105/16">
   var N = Number(prompt());
   var K = Number(prompt());
-  for (i = 0; i < 20; i++) {
-    M = N * i;
-    p = p * (1 + 0.01 * K);
-    if (M >= p) {
-      if (20 * N < p) {
-        console.log('Impossible');
-        break;
-      }
-      else {
-        console.log(i);
-      }
+  var y = 1;
+  var p = 200;
+  var f = Number();
+  var f = N;
+  while (f <= p){
+    y++;
+    if (y > 20) {
+      break;
     }
-    else {
-      continue;
-    }
+    f = N * y;
+    p *= (1 + 0.01 * K);
   }
+  if (y <= 20) {
+    console.log(y);
+  }
+  else {
+    console.log('Impossible');
+  }
+
+  // for (i = 0; i < 20; i++) {
+  //   M = N * i;
+  //   p = p * (1 + 0.01 * K);
+  //   if (M >= p) {
+  //     if (20 * N < p) {
+  //       console.log('Impossible');
+  //       break;
+  //     }
+  //     else {
+  //       console.log(i);
+  //     }
+  //   }
+  //   else {
+  //     continue;
+  //   }
+  // }
 
 </script>
 
