@@ -939,37 +939,101 @@
 </script>
 
 <script id="ch0105/28">
-  var n = Number(prompt());
-  var a = [];
-  while (n > 0) {
-    var b = (n % 10).toString();
-    a.push(b);
-    n = Math.trunc(n / 10);
+  var a = Number(prompt());
+  var b = a.toString();
+  var d = b.length;
+  var m = [];
+  for (i = 0; i < d; i++ )  {
+     var c = Math.trunc(a / 10 ** i) % 10;
+     m.push(c);
   }
-  a = a.toString();
-  a = a.replace(',2,',' 2 ');
-  console.log(a);
+  m = m.toString();
+  m = m.replace(/,/g, " ");
+  console.log(m);
+
+  // var n = Number(prompt());
+  //   var a = [];
+  //   while (n > 0) {
+  //     var b = (n % 10).toString();
+  //     a.push(b);
+  //     n = Math.trunc(n / 10);
+  //   }
+  //   a = a.toString();
+  //   a = a.replace(',2,', ' 2 ');
+  //   console.log(a);
+
+
+</script>
+
+<script id="ch0105/29">
+  var N = Number(prompt());
+  // var n = N.toString();
+  var m = 0;
+  var f = 1;
+  if (N < 0) {
+    N = -N;
+    f = -1;
+  }
+  while (N != 0){
+    m = m * 10 + N % 10;
+    N /= 10;
+  }
+  m = f * m;
+  console.log(m);
+
+
+
+
+
+
+
+  // while (n[m] == '0') {
+  //   m--;
+  // }
+  // if (n[0] == '-') {
+  //   modNum = 1;
+  //   t
+  // }
+  // for (i = m; i >= 1; i--){
+
+  // }
+  // if
 </script>
 
 <script id="ch0105/30">
   var m = Number(prompt());
   var k = Number(prompt());
   var t = 0;
-  var a = [];
+  var a = [5];
   m = m.toString();
   a.push(m);
-  for (i = 0; i <= 5; i++) {
-    a[i];
-    var b = a[i];
-    b = b.toString();
-    if (b == '3') {
+  a[4] = Math.trunc(m / 10000);
+  a[3] = Math.trunc(m / 1000) % 10;
+  a[2] = Math.trunc(m / 100) % 10;
+  a[1] = Math.trunc(m / 10) % 10;
+  a[0] = m % 10;
+  for (i = 0; i < 5; i++) {
+    if (a[i] == 3) {
        t++;
      }
+     else {
+       continue;
+     }
    }
-  if ((m == 0) && (t == k)) {
+  if (m % 19 == 0) {
+    if (t == k){
      console.log('YES');
    }
+   else {
+     console.log('NO');
+   }
+  }
+
   else {
      console.log('NO');
    }
+</script>
+
+<script>
+
 </script>
