@@ -856,16 +856,25 @@
     var j = Number(prompt());
     x += 300;
     if (x < j) {
-      console.log('-' + i);
+      break;
     }
-    else {
+    else if (x >= j) {
       x -= j;
       k = x % 100;
       y += x - k;
       x = k;
+      var m = x + y * 1.2;
+      continue;
     }
   }
-  console.log(x + y * 1.2)
+  if (i <=12) {
+    if (x < j) {
+    console.log('-' + i);
+    }
+  }
+  else {
+    console.log(m);
+  }
 </script>
 
 <script id="ch0105/23">
