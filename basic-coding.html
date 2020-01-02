@@ -832,37 +832,20 @@
 
 <script id="ch0105/21">
   var N = Number(prompt());
-  var m = N % 2;
-  var M = [];
-   if (m == 0) {
-     function getBaseLog(2,N) {
-       return Math.log(N) / Math.log(2);
-     }
-     var c =
-      for (i = 0; i < Math.log(N); i++) {
-        a = (N /= 2);
-        var a = a.toString();
-        var b = N.toString();
-        N = b + '/2=' + a;
-        M.push(N);
-     }
+  var x = N;
+  var y = Number();
+  while (x != 1) {
+    y = x;
+    if (x % 2 == 0) {
+      x /= 2;
+      console.log(y + '/2=' + x);
     }
-
-    else {
-      N = N * 3 + 1;
-      for (i = 0; i < Math.log(N); i++) {
-        a = (N /= 2);
-        var a = a.toString();
-        var b = N.toString();
-        N = b + '/2=' + a;
-        M.push(N);
-      }
+    else if (x % 2 != 0) {
+      x = x * 3 + 1;
+      console.log(y + '*3+1=' + x);
     }
-    M.toString();
-    M = M.toString();
-    M.replace(',', '/n');
-    M = M.replace(',', '/n');
-    console.log(M);
+  }
+  console.log('End');
 </script>
 
 <script id="ch0105/22">
