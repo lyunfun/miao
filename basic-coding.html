@@ -1075,133 +1075,15 @@
 </script>
 
 <script id="ch0105/29">
-  var N = Number(prompt());
-  var b = N.toString();
-  var d = b.length;
-  var n = d - 1;
-  var f = 0;
-  var m = b.split(',');
-  var M = [];
-  for (i = 0; i < d; i++) {
-    if (m[0] !== '-') {
-      var c = Math.trunc(N / 10 ** i) % 10;
-      M.push(c);
-      }
-    else if (m[0] == '-') {
-      N = -N;
-      var c = Math.trunc(N / 10 ** i) % 10;
-      M.push(c);
-      // m.unshift('-');
+  var a = 0;
+  var b = 0;
+  var a = Number(prompt());
+  while (a != 0) {
+    b *= 10;
+    b += a % 10;
+    a = Math.trunc(a / 10);
     }
-    }
-  while (m[n] == '0'){
-
-    n--;
-  }
-
-
-  // if (f == 0) {
-  //   console.log(m[0]);
-  // }
-
-  // if (m[0] == '-') {
-  //   f = 1;
-  //   m.unshift('-');
-  // }
-  M = M.toString();
-  // m = m.replace(/,/g, "");
-  console.log(M);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  var N = Number(prompt());
-  var n = N.toString();
-  var a = n.length;
-  var M = [];
-  var m = a - 1;
-  while (n[m] == '0') {
-    m--;
-  }
-  if (n[0] == '-') {
-     f = 1;
-     count << '-';// 符号判定
-   }
-
-
-
-
-
-
-
-
-  var N = Number(prompt());
-  var n = N.toString();
-  var n = [];
-  var f = 0;
-  var k = 0;
-  var m;
-
-
-  m = n.length - 1;//统计字符串有多长，注意下标是从0开始的，值要减1
-
-  while (n[m] == '0') m--;  //计算第一个非’0’位置
-
-  if (n[0] == '-') {
-    f = 1;
-    n.unshift('-'); }//符号特判
-
-  for ( i = m; i >= 1; i--) {
-    console.log(n[i]);//从非’0’位置倒序输出
-  }
-  if (f == 0) {
-      console.log(m[0]);
-    }
-
-
-
-  var m = 0;
-  var f = 1;
-  if (N < 0) {
-    N = -N;
-    f = -1;
-  }
-  while (N != 0){
-    m = m * 10 + N % 10;
-    N /= 10;
-  }
-  m = f * m;
-  console.log(m);
-
-
-
-
-
-
-
-  // while (n[m] == '0') {
-  //   m--;
-  // }
-  // if (n[0] == '-') {
-  //   modNum = 1;
-  //   t
-  // }
-  // for (i = m; i >= 1; i--){
-
-  // }
-  // if
+  console.log(b);
 </script>
 
 <script id="ch0105/30">
