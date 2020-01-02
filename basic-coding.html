@@ -1015,11 +1015,10 @@
   var x = Math.trunc(Number());
   var y = Math.trunc(Number());
   var z = Math.trunc(Number());
-  var i = Math.trunc(Number());
   for (i = 101; i <= 666; i++){
-  x = i / 100;
-  y = i / 10;
-  z = i % 10;
+    x = Math.trunc(i / 100);
+    y = Math.trunc(i / 10) % 10;
+    z = i % 10;
   if (x * 7 * 7 + y * 7 + z == z * 9 * 9 + y * 9 + x) {
       break;
     }
