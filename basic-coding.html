@@ -754,26 +754,25 @@
 
 <script id="ch0105/17">
   var k = Number(prompt());
-  var f = [];
-  f[1] = 1;
-  f[2] = 1;
-  for (i = 3; i <= k; i++) {
-    f[i] = f[i - 1] + f[i - 2];
-    console.log(f[k]);
-   }
-  //  方法二
-  // var k = Number(prompt());
-  //   var last = 1;
-  //   var last2 = 1;
-  //   current = Number();
-  //   var current = last2;
+    var last = 1;
+    var last2 = 1;
+    current = Number();
+    var current = last2;
+    for (i = 3; i <= k; i++) {
+      last2 = last;
+      last = current;
+      current = last + last2;
+    }
+    console.log(current);
+  // 方法二
+  //   var k = Number(prompt());
+  //   var f = [];
+  //   f[1] = 1;
+  //   f[2] = 1;
   //   for (i = 3; i <= k; i++) {
-  //     last2 = last;
-  //     last = current;
-  //     current = last + last2;
-
+  //     f[i] = f[i - 1] + f[i - 2];
+  //     console.log(f[k]);
   //   }
-  //   console.log(current);
 </script>
 
 
@@ -918,6 +917,7 @@
   for (i = 101; i <= 666; i++){
   x = i / 100;
   y = i / 10;
+  z = i % 10;
   if (x * 7 * 7 + y * 7 + z == z * 9 * 9 + y * 9 + x) {
       break;
     }
