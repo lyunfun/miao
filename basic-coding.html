@@ -1015,17 +1015,19 @@
   var x = Math.trunc(Number());
   var y = Math.trunc(Number());
   var z = Math.trunc(Number());
-  for (i = 101; i <= 666; i++){
-    x = Math.trunc(i / 100);
-    y = Math.trunc(i / 10) % 10;
-    z = i % 10;
-  if (x * 7 * 7 + y * 7 + z == z * 9 * 9 + y * 9 + x) {
-      break;
+  var xyz = Number();
+  var zyx = Number();
+  for (x = 1; x < 7; x++) {
+    for (z = 1; z < 7; z++) {
+      xyz = x * 7 * 7 + y * 7 + z;
+      zyx = z * 9 * 9 + y * 9 + x;
+      if (xyz == zyx) {
+        console.log(x * 7 * 7 + y * 7 + z);
+        console.log(x + (y).toString() + z);
+        console.log(z + (y).toString() + x);
+      }
     }
-}
-  console.log(x * 7 * 7 + y * 7 + z);
-  console.log(x + (y).toString() + z);
-  console.log(z + (y).toString() + x);
+  }
 </script>
 
 <script id="ch0105/26">
