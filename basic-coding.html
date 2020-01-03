@@ -1351,14 +1351,75 @@
 </script>
 
 <script id="ch0105/40">
+  var n = Number(prompt());
+  var j;
+  var sum = 1;
+  for (var i = 2; i <= n; i++) {
+    for ( j += i; j > 0; j /= 10){
+      if (j % 10 == 1) {
+        sum++;
+      }
 
+    }
+
+  }
+  console.log(sum);
 </script>
 
 <script id="ch0105/41">
-
+  var l = Number(prompt());
+  var r = Number(prompt());
+  var k = 0;
+  var a = 1;
+  for (i = l; i <= r; i++){
+      for (k = i; k > 0; k /= 10){
+        if (k % 10 == 2) {
+          a++;
+        }
+      }
+  }
+  console.log(a);
 </script>
 
 <script id="ch0105/42">
+  var h = Number(prompt());
+  var d = Number(prompt());
+  var a = '@';
+  var x = Number(prompt());
+  var result = '';
+  if (x == 1) {
+      for (i = 1; i <= h; i++) {
+        for (j = 1; j <= d; j++) {
+          console.log("%c", a);
+        }
+        console.log("\n");
+      }
+    }
+
+  if (x == 0) {
+    for (i = 1; i <= h; i++) {
+      if (i == 1 || i == h) {
+        for (j = 1; j <= d; j++) {
+          console.log("%c", a);
+        }
+        console.log("\n");
+      }
+      else {
+        for (j = 1; j <= d; j++) {
+          if (j == 1 || j == d) {
+            console.log("%c", a);
+          }
+          else {
+            console.log(" ");
+          }
+        }
+        console.log("\n");
+      }
+    }
+  }
+  console.log(result);
+
+
 
 </script>
 
