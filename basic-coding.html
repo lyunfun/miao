@@ -1275,7 +1275,15 @@
 </script>
 
 <script id="ch0105/36">
-
+  var x = Number(prompt());
+  var n = Number(prompt());
+  var f = 1;
+  var k = 1;
+  for (var i = 1;i <= n;i++){
+    k *= x;
+    f += k;
+  }
+  console.log(f.toFixed(2));
 </script>
 
 <script id="ch0105/37">
