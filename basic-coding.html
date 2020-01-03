@@ -1194,24 +1194,21 @@
 <script id="ch0105/31">
   var N = Number(prompt());
   var M = Number(prompt());
-  // var result = '';
+  var result = [];
   for (var i = 1; i <= N; i++) {
     var flag = true;
-    for (var p = 1; p <= M && p <= i; p++) {
+    for (var p = 1; p <= M; p++) {
       if (i % p == 0) {
         flag = !flag;
       }
     }
-    if (flag = false) {
-      // if (xx) {
-        // result += i + ',';
-    console.log(i);
-    }
-    // else {
-    //   re
-    // }
-  }
+    if (flag == false) {
+    result.push(i)
 
+    }
+  }
+  result = result.toString();
+  console.log(result);
 </script>
 
 <script id="ch0105/32">
