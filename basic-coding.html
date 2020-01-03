@@ -1277,6 +1277,18 @@
   console.log(e.toFixed(10));
 </script>
 
+<script id="ch0105/36">
+
+</script>
+
+<script id="ch0105/37">
+
+</script>
+
+<script id="ch0105/38">
+
+</script>
+
 <script id="ch0105/39">
   var n = Number(prompt());
   var sum = 0;
@@ -1306,5 +1318,55 @@
 
 <script id="ch0105/40">
 
+</script>
+
+<script id="ch0105/41">
+
+</script>
+
+<script id="ch0105/42">
+
+</script>
+
+<script id="ch0105/43">
+  var n = Number(prompt());
+  var isPrime;
+  var count =0;
+  for (var x = 2; ;x++) {
+    isPrime = true;
+    for (var j =2; j <= x / 2;j++) {
+      if (x % j == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      count++;
+      if (count == n) {
+      console.log(x);
+      break;
+      }
+    }
+  }
+</script>
+
+<script id="ch0105/44">
+
+</script>
+
+<script id="ch0105/45">
+  var n = Number(prompt());
+  var sum = 0;
+  var salary =1;
+  var count = 0;
+  for (var i = 1;i <= n;i++){
+    sum += salary;
+    count++;
+    if (count == salary) {
+      salary++;
+      count = 0;
+    }
+  }
+  console.log(sum);
 </script>
 
