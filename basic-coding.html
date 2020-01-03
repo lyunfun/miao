@@ -1287,11 +1287,40 @@
 </script>
 
 <script id="ch0105/37">
-
+  var M = Number(prompt());
+  var N = Number(prompt());
+  var X = Number(prompt());
+  while (N * X > M) {
+    X -= Math.ceil(M / N);
+    if (X < 0) {
+      break;
+    }
+    N += Math.floor(M / N);
+    }
+  console.log(N);
 </script>
 
 <script id="ch0105/38">
-
+  var n = Number(prompt());
+  var t;
+  var C;
+  var a = 0;
+  if (n == 0) {
+    var C = Number(prompt());
+    console.log('0');
+    }
+  else {
+    for (var j = n; j > 0; j--) {
+      var C = Number(prompt());
+      if (a == 0) {
+        console.log(C * j);
+        }
+      else {
+        console.log('' + C * j);
+        a++;
+      }
+    }
+  }
 </script>
 
 <script id="ch0105/39">
@@ -1356,7 +1385,26 @@
 </script>
 
 <script id="ch0105/44">
-
+  var n = Number(prompt());
+  var isPrime;
+  var count = 0;
+  for (var x = 2; ; x++) {
+    isPrime = true;
+    var sqrt_x = Math.sqrt(x);
+    for (var j = 2; j <= sqrt_x; j++) {
+      if (x % j == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      count++;
+      if (count == n) {
+        console.log(x)
+        break;
+      }
+    }
+  }
 </script>
 
 <script id="ch0105/45">
