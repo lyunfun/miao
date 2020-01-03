@@ -928,6 +928,17 @@
   var H = (a[10] / 2).toFixed(7);
   console.log(s);
   console.log(H);
+
+  // 方法2
+  // var h = Number(prompt());
+  // var t = h;
+  // var sum = 0;
+  // for (i = 1; i <= 10; i++) {
+  //   sum += 2 * h;
+  //   h /= 2;
+  // }
+  // console.log((sum - t).toFixed(4));
+  // console.log(h.toFixed(7));
 </script>
 
 <script id="ch0105/21">
@@ -976,6 +987,28 @@
   else {
     console.log(m);
   }
+  // 方法2
+  // var rest = 0;
+  // var stock = 0;
+  // var flag = false;
+  // for ( var i = 1; i <= 12; i++) {
+  //   rest += 300;
+  //   var budget = +prompt();
+  //   if (budget > rest) {
+  //     console.log(-i);
+  //     flag = false;
+  //     break;
+  //   }
+  //   rest = rest - budget;
+  //   if (rest > 100) {
+  //     var t = Math.floor(rest / 100) * 100;
+  //     stock += t;
+  //     rest = rest -t;
+  //   }
+  // }
+  // if (!flag) {
+  // console.log(Math.trunc(rest + stock * 1.2));
+  // }
 </script>
 
 <script id="ch0105/23">
@@ -1028,6 +1061,22 @@
       }
     }
   }
+  // 方法2
+  // for (var i = 100;i <= 999; i++){
+  //   var a7 = i % 7;
+  //   var b7 = (i - a7) / 7 % 7;
+  //   var c7 = (i - a7 - b7 * 7) /7 / 7 % 7;
+
+  //   var a9 = i % 9;
+  //   var b9 = (i - a9) / 9 % 9;
+  //   var c9 = (i - a9 - b9 * 9) / 9 / 9 % 9;
+
+  //   if (a7 == c9 && b7 == b9 && c7 == a9) {
+  //     console.log(i);
+  //     console.log(c7 + b7.toString() + a7);
+  //     console.log( c9 + b9.toString() + a9);
+  //   }
+  // }
 </script>
 
 <script id="ch0105/26">
@@ -1072,6 +1121,14 @@
   m = m.toString();
   m = m.replace(/,/g, " ");
   console.log(m);
+
+  // 方法2
+  // var n = +prompt();
+  //  do{
+  // var digit = n % 10;
+  // console.log(digit);
+  // n = (n -digit) / 10;
+  // } while (n > 0)
 </script>
 
 <script id="ch0105/29">
@@ -1084,6 +1141,21 @@
     a = Math.trunc(a / 10);
     }
   console.log(b);
+
+  // 方法2
+  // var n = +prompt();
+  // var result = 0;
+  // var sign = 1;
+  // if (n < 0){
+  //   n = -n;
+  //   sign = -1;
+  // }
+  // do {
+  //   var digit = n % 10;
+  //   result = result * 10 + digit;
+  //   n = (n - digit) / 10;
+  // } while(n != 0)
+  // console.log(result * sign);
 </script>
 
 <script id="ch0105/30">
@@ -1122,7 +1194,23 @@
 <script id="ch0105/31">
   var N = Number(prompt());
   var M = Number(prompt());
-  var a = [5010];
+  // var result = '';
+  for (var i = 1; i <= N; i++) {
+    var flag = true;
+    for (var p = 1; p <= M && p <= i; p++) {
+      if (i % p == 0) {
+        flag = !flag;
+      }
+    }
+    if (flag = false) {
+      // if (xx) {
+        // result += i + ',';
+    console.log(i);
+    }
+    // else {
+    //   re
+    // }
+  }
 
 </script>
 
@@ -1168,20 +1256,55 @@
 </script>
 
 <script id="ch0105/34">
-  var n = Number(prompt());
-  var a = []
-  var s = 0;
-  for (var i =1;i <= n; i++) {
-    var f = 1;
-    for (var j =1; j <= i; j++) {
-      f *= j;
-      s += f;
-    }
+  var n = +prompt()
+  var fac = 1;
+  var sum = 0;
+  for (var i = 1; i <= n;i++) {
+    fac *= i;
+    sum += fac
   }
-  console.log(s);
+  console.log(sum);
 </script>
 
 <script id="ch0105/35">
+  var n = Number(prompt());
+  var e = 1;
+  var t = 1;
+  for (var i = 1; i <= n; i++) {
+    t /= i;
+    e += t;
+  }
+  console.log(e.toFixed(10));
+</script>
+
+<script id="ch0105/39">
+  var n = Number(prompt());
+  var sum = 0;
+  for (var i = 1; i <= n; i++) {
+    if (i % 7 ==0){
+      continue;
+    }
+    else {
+      var t = i;
+      var hasRel = false;
+      while(t>0) {
+        var d = t % 10;
+        if (d == 7){
+          hasRel = true;
+          break;
+        }
+        t = (t-d) /10;
+      }
+      if(hasRel) {
+      continue;
+      }
+    }
+    sum += i * i;
+  }
+  console.log(sum);
+</script>
+
+<script id="ch0105/40">
 
 </script>
 
