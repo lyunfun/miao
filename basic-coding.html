@@ -1486,13 +1486,28 @@
   var b = Math.trunc(Number(prompt()));
   var c = Math.trunc(Number(prompt()));
   if (a > b && a > c) {
-    console.log(a);
+    if (b > c) {
+    console.log(c + b.toString() + a);
+    }
+    else {
+      console.log(b + c.toString() + a);
+    }
   }
   else if (b > a && b > c) {
-    console.log(b);
+    if (a > c) {
+      console.log(c + a.toString() + b);
+    }
+    else {
+      console.log(a + c.toString() + b);
+    }
   }
   else if (c > a && c > b) {
-    console.log(c);
+    if (a > b) {
+      console.log(b + a.toString() + c);
+    }
+    else {
+      console.log(a + b.toString() + c);
+    }
   }
 </script>
 
