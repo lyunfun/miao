@@ -1573,3 +1573,28 @@
 
 </script>
 
+<script id="complete-number">
+  var n = Number(prompt());
+  var sum = 0;
+  var sqrt_n = Math.sqrt(n);
+  for (var i = 1; i < sqrt_n; i++) {
+    if (n % i == 0) {
+      sum += i + n / i;
+    }
+  }
+  if (Math.floor(sqrt_n) * Math.floor(sqrt_n) == n) {
+    sum += sqrt_n;
+  }
+  if (sum == n) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+</script>
+
+<script id="itob">
+  var n = Number(prompt());
+  var m = n.toString();
+  console.log(m);
+</script>
+
