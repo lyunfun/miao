@@ -1421,22 +1421,10 @@
 
 <script id="ch0105/43">
   var n = Number(prompt());
-  var isPrime;
-  var count =0;
-  for (var x = 2; ;x++) {
-    isPrime = true;
-    for (var j =2; j <= x / 2;j++) {
-      if (x % j == 0) {
-        isPrime = false;
-        break;
-      }
-    }
-    if (isPrime) {
-      count++;
-      if (count == n) {
-      console.log(x);
+  for (i = 2; i <= Math.sqrt(n); i++){
+    if (n % i == 0) {
+      console.log(n / i);
       break;
-      }
     }
   }
 </script>
