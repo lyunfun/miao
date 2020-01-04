@@ -1468,3 +1468,30 @@
   console.log(sum);
 </script>
 
+<script id="narcissistic">
+  var n = Number(prompt());
+  var t = n;
+  var a = 0;
+  do {
+    var digit = t % 10;
+    t = (t - digit) / 10;
+    a++;
+  } while (t > 0)
+  t = n;
+  var sum = 0;
+  do {
+    var digit = t % 10;
+    var power = 1;
+    for (var i = 0; i < a; i++) {
+      power *= digit;
+    }
+    sum += power;
+    t = (t - digit) / 10;
+  } while (t > 0)
+  if (sum == n) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+</script>
+
