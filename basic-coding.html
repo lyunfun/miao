@@ -1468,6 +1468,34 @@
   console.log(sum);
 </script>
 
+<script id="7">
+  var n = Number(prompt());
+  if (n % 7 == 0) {
+    console.log('YES');
+  }
+  if (n % 10 == 7) {
+    console.log('YES')
+  }
+  if ((n % 7 !== 0) && (n % 10 !== 7)) {
+    console.log('NO');
+  }
+</script>
+
+<script id="sort">
+  var a = Math.trunc(Number(prompt()));
+  var b = Math.trunc(Number(prompt()));
+  var c = Math.trunc(Number(prompt()));
+  if (a > b && a > c) {
+    console.log(a);
+  }
+  else if (b > a && b > c) {
+    console.log(b);
+  }
+  else if (c > a && c > b) {
+    console.log(c);
+  }
+</script>
+
 <script id="narcissistic">
   var n = Number(prompt());
   var t = n;
@@ -1493,5 +1521,36 @@
   } else {
     console.log('NO');
   }
+</script>
+
+<script id="narcissistics">
+  var m = [];
+  for (var j = 100; j < 1000; j++) {
+    var n = j;
+    var t = n;
+    var a = 0;
+    do {
+      var digit = t % 10;
+      t = (t - digit) / 10;
+      a++;
+    } while (t > 0)
+    t = n;
+    var sum = 0;
+    do {
+      var digit = t % 10;
+      var power = 1;
+      for (var i = 0; i < a; i++) {
+        power *= digit;
+      }
+      sum += power;
+      t = (t - digit) / 10;
+    } while (t > 0)
+    if (sum == n) {
+     m.push(n);
+    }
+  }
+  m = m.toString();
+  m = m.replace(/,/g, " ");
+  console.log(m);
 </script>
 
