@@ -1305,22 +1305,24 @@
   var t;
   var C;
   var a = 0;
+  var result = '';
   if (n == 0) {
-    var C = Number(prompt());
-    console.log('0');
+    result = '0';
     }
   else {
-    for (var j = n; j > 0; j--) {
+    for (var j = n * 2; j > 0; j--) {
       var C = Number(prompt());
       if (a == 0) {
-        console.log(C * j);
+        result += C * j;
         }
       else {
-        console.log('' + C * j);
+        result += ' ' + C * j;
         a++;
       }
     }
   }
+  result = result.toString();
+  console.log(result);
 </script>
 
 <script id="ch0105/39">
@@ -1352,16 +1354,14 @@
 
 <script id="ch0105/40">
   var n = Number(prompt());
-  var j;
+  var j = 0;
   var sum = 1;
-  for (var i = 2; i <= n; i++) {
-    for ( j += i; j > 0; j /= 10){
+  for (var i = 0; i < n; i++) {
+    for ( j += i; j > 0; j = Math.trunc(j / 10)){
       if (j % 10 == 1) {
         sum++;
       }
-
     }
-
   }
   console.log(sum);
 </script>
@@ -1370,9 +1370,9 @@
   var l = Number(prompt());
   var r = Number(prompt());
   var k = 0;
-  var a = 1;
+  var a = 0;
   for (i = l; i <= r; i++){
-      for (k = i; k > 0; k /= 10){
+      for (k = i; k > 0; k = Math.trunc(k / 10)){
         if (k % 10 == 2) {
           a++;
         }
