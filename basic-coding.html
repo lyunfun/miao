@@ -1600,7 +1600,20 @@
 
 <script id="sqrt">
   var n = Number(prompt());
-  var m = Math.sqrt(n);
-  console.log(m.toFixed(3));
+  var low = 1;
+  var high = n;
+  var count = 0;
+  while (high - low > 0.0000000001) {
+    count++;
+    var mid = (low + high) / 2;
+    if (mid * mid > n) {
+      high = mid;
+    } else if (mid * mid < n) {
+      low = mid;
+    } else {
+      break;
+    }
+  }
+  console.log(mid.toFixed(3));
 </script>
 
