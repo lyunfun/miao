@@ -1570,7 +1570,25 @@
 </script>
 
 <script id="palindrom">
-
+  var n = +prompt();
+  var m = n;
+  var result = 0;
+  var sign = 1;
+  if (m < 0) {
+    m = -m;
+    sign = -1;
+  }
+  do {
+    var digit = m % 10;
+    result = result * 10 + digit;
+    m = (m - digit) / 10;
+  } while (m != 0)
+  if ((result * sign) == n) {
+  console.log('YES');
+  }
+  else {
+    console.log('NO');
+  }
 </script>
 
 <script id="complete-number">
