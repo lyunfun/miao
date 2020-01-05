@@ -1643,6 +1643,29 @@
   console.log(m);
 </script>
 
+<script id="prime">
+  var n = Number(prompt());
+  if (n == 1) {
+    console.log('No');
+    }
+  else {
+    var isPrime = true;
+    var sqrt_x = Math.sqrt(n);
+    for (var i = 2; i <= sqrt_x; i++) {
+      if (n % i == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+        console.log('YES');
+      }
+    else {
+      console.log('No');
+    }
+  }
+</script>
+
 <script id="sqrt">
   var n = Number(prompt());
   var low = 1;
