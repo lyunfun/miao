@@ -1690,6 +1690,17 @@
 <script id="lcf&lcm">
   var a = Number(prompt());
   var b = Number(prompt());
+  var m = a;
+  var n = b;
+  var t = 1;
+  while (t != 0) {
+    t = m % n;
+    m = n;
+    n = t;
+  }
+  var hcf = m;
+  var lcm = a * b / hcf;
+  console.log(lcm + ' ' + hcf);
 </script>
 
 <script id="sqrt">
