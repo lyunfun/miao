@@ -1667,7 +1667,24 @@
 </script>
 
 <script id="primes">
-
+  var m = [];
+  for (var j = 2; j < 100; j++) {
+    var n = j;
+    var isPrime = true;
+    var sqrt_x = Math.sqrt(n);
+    for (var i = 2; i <= sqrt_x; i++) {
+      if (n % i == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      m.push(n);
+    }
+  }
+  m = m.toString();
+  m = m.replace(/,/g, " ");
+  console.log(m);
 </script>
 
 <script id="sqrt">
