@@ -1683,9 +1683,32 @@
 </script>
 
 <script id="itob">
-  var n = Number(prompt());
-  var m = n.toString();
-  console.log(m);
+  function itob(n) {
+    var result = '';
+    while (n > 0) {
+      var digit = n % 10;
+      result = digitToChar(digit) + result;
+      n = (n -digit) / 10;
+    }
+    return result;
+  }
+
+  function digitToChar(n) {
+    switch (n) {
+      case 0: return '0';
+      case 1: return '1';
+      case 2: return '2';
+      case 3: return '3';
+      case 4: return '4';
+      case 5: return '5';
+      case 6: return '6';
+      case 7: return '7';
+      case 8: return '8';
+      case 9: return '9';
+    }
+  }
+  var c = itob(Number(prompt()));
+  console.log(c);
 </script>
 
 <script id="lcf&lcm">
@@ -1702,6 +1725,18 @@
   var hcf = m;
   var lcm = a * b / hcf;
   console.log(lcm + ' ' + hcf);
+
+  // function lcf(m,n) {
+  //   while (m != n) {
+  //     if (m < n) {
+  //       var t = m;
+  //       m = n;
+  //       n = t;
+  //     }
+  //     m = m -n;
+  //   }
+  //   return m;
+  // }
 </script>
 
 <script id="sqrt">
@@ -1721,5 +1756,14 @@
     }
   }
   console.log(mid.toFixed(3));
+
+//   牛顿法实现平方根
+// function sqrt(n) {
+//   var r = n;
+//   for (var i = 0; i < 10; i++) {
+//     r = (r * r + n) / 2 / r;
+//   }
+//   return r;
+// }
 </script>
 
