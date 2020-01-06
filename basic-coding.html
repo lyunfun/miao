@@ -1707,8 +1707,17 @@
       case 9: return '9';
     }
   }
-  var c = itob(Number(prompt()));
-  console.log(c);
+
+  var d = Number(prompt());
+  if(d < 0) {
+    d = -d;
+    var c = itob(d);
+    console.log(c);
+  }
+  else {
+    var c = itob(d);
+    console.log(c);
+  }
 </script>
 
 <script id="lcf&lcm">
@@ -1757,13 +1766,15 @@
   }
   console.log(mid.toFixed(3));
 
-//   牛顿法实现平方根
-// function sqrt(n) {
-//   var r = n;
-//   for (var i = 0; i < 10; i++) {
-//     r = (r * r + n) / 2 / r;
-//   }
-//   return r;
-// }
+  // 牛顿法实现平方根
+  // function sqrt(n) {
+  //   var r = n;
+  //   for (var i = 0; i < 10; i++) {
+  //     r = (r * r + n) / 2 / r;
+  //   }
+  //   return r;
+  // }
+  // var result = sqrt(Number(prompt()));
+  // console.log(result.toFixed(3));
 </script>
 
